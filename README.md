@@ -90,7 +90,7 @@
    - To download all the software please write in the CMD (If you've git, installed on your machine)
 
 ```dotnetcli
-git clone https://github.com/yaarian-om/Interstellar_Library
+git clone https://github.com/yaarian-om/Unreal_Journey_Engine
 ```
 <!-- <p align="center">
     <img src="" alt="Interstellar_Library Clone" width="80%" height="250" alt="Clone Result"/>
