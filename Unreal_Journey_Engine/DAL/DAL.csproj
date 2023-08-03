@@ -52,10 +52,59 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database\DatabaseContext.cs" />
+    <Compile Include="Database\Models\Booking.cs" />
+    <Compile Include="Database\Models\Feedback.cs" />
+    <Compile Include="Database\Models\Tourist_Profile.cs" />
+    <Compile Include="Database\Models\Tour_Package.cs" />
+    <Compile Include="Database\Models\Tour_Review.cs" />
     <Compile Include="Database\Models\User.cs" />
     <Compile Include="Migrations\202307311344447_Create_User_Table.cs" />
     <Compile Include="Migrations\202307311344447_Create_User_Table.designer.cs">
       <DependentUpon>202307311344447_Create_User_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308031505260_Create_Tourist_Profile_Table.cs" />
+    <Compile Include="Migrations\202308031505260_Create_Tourist_Profile_Table.designer.cs">
+      <DependentUpon>202308031505260_Create_Tourist_Profile_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308031511283_Create_Tour_Package_Table.cs" />
+    <Compile Include="Migrations\202308031511283_Create_Tour_Package_Table.designer.cs">
+      <DependentUpon>202308031511283_Create_Tour_Package_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308031530294_Create_Booking_Table.cs" />
+    <Compile Include="Migrations\202308031530294_Create_Booking_Table.designer.cs">
+      <DependentUpon>202308031530294_Create_Booking_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308031532579_Create_Tour_Review_Table.cs" />
+    <Compile Include="Migrations\202308031532579_Create_Tour_Review_Table.designer.cs">
+      <DependentUpon>202308031532579_Create_Tour_Review_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308031538275_Create_Feedback_Table.cs" />
+    <Compile Include="Migrations\202308031538275_Create_Feedback_Table.designer.cs">
+      <DependentUpon>202308031538275_Create_Feedback_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308031559234_Create_1_to_1_Relation_between_User_to_Tourist_Profile_Table.cs" />
+    <Compile Include="Migrations\202308031559234_Create_1_to_1_Relation_between_User_to_Tourist_Profile_Table.designer.cs">
+      <DependentUpon>202308031559234_Create_1_to_1_Relation_between_User_to_Tourist_Profile_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308031620163_Create_1_to_Many_Relation_between_Tourist_Profile_to_Booking_Table.cs" />
+    <Compile Include="Migrations\202308031620163_Create_1_to_Many_Relation_between_Tourist_Profile_to_Booking_Table.designer.cs">
+      <DependentUpon>202308031620163_Create_1_to_Many_Relation_between_Tourist_Profile_to_Booking_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308031626382_Create_1_to_Many_Relation_between_Tour_Package_to_Booking_Table.cs" />
+    <Compile Include="Migrations\202308031626382_Create_1_to_Many_Relation_between_Tour_Package_to_Booking_Table.designer.cs">
+      <DependentUpon>202308031626382_Create_1_to_Many_Relation_between_Tour_Package_to_Booking_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308031639037_Create_1_to_Many_Relation_between_User_to_Feedback_Table.cs" />
+    <Compile Include="Migrations\202308031639037_Create_1_to_Many_Relation_between_User_to_Feedback_Table.designer.cs">
+      <DependentUpon>202308031639037_Create_1_to_Many_Relation_between_User_to_Feedback_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308031651173_Create_1_to_Many_Relation_between_Tourist_Profile_to_Tour_Review_Table.cs" />
+    <Compile Include="Migrations\202308031651173_Create_1_to_Many_Relation_between_Tourist_Profile_to_Tour_Review_Table.designer.cs">
+      <DependentUpon>202308031651173_Create_1_to_Many_Relation_between_Tourist_Profile_to_Tour_Review_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308031724241_Create_1_to_Many_Relation_between_Tour_Package_to_Tour_Review_Table.cs" />
+    <Compile Include="Migrations\202308031724241_Create_1_to_Many_Relation_between_Tour_Package_to_Tour_Review_Table.designer.cs">
+      <DependentUpon>202308031724241_Create_1_to_Many_Relation_between_Tour_Package_to_Tour_Review_Table.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,6 +119,39 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202307311344447_Create_User_Table.resx">
       <DependentUpon>202307311344447_Create_User_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308031505260_Create_Tourist_Profile_Table.resx">
+      <DependentUpon>202308031505260_Create_Tourist_Profile_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308031511283_Create_Tour_Package_Table.resx">
+      <DependentUpon>202308031511283_Create_Tour_Package_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308031530294_Create_Booking_Table.resx">
+      <DependentUpon>202308031530294_Create_Booking_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308031532579_Create_Tour_Review_Table.resx">
+      <DependentUpon>202308031532579_Create_Tour_Review_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308031538275_Create_Feedback_Table.resx">
+      <DependentUpon>202308031538275_Create_Feedback_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308031559234_Create_1_to_1_Relation_between_User_to_Tourist_Profile_Table.resx">
+      <DependentUpon>202308031559234_Create_1_to_1_Relation_between_User_to_Tourist_Profile_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308031620163_Create_1_to_Many_Relation_between_Tourist_Profile_to_Booking_Table.resx">
+      <DependentUpon>202308031620163_Create_1_to_Many_Relation_between_Tourist_Profile_to_Booking_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308031626382_Create_1_to_Many_Relation_between_Tour_Package_to_Booking_Table.resx">
+      <DependentUpon>202308031626382_Create_1_to_Many_Relation_between_Tour_Package_to_Booking_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308031639037_Create_1_to_Many_Relation_between_User_to_Feedback_Table.resx">
+      <DependentUpon>202308031639037_Create_1_to_Many_Relation_between_User_to_Feedback_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308031651173_Create_1_to_Many_Relation_between_Tourist_Profile_to_Tour_Review_Table.resx">
+      <DependentUpon>202308031651173_Create_1_to_Many_Relation_between_Tourist_Profile_to_Tour_Review_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308031724241_Create_1_to_Many_Relation_between_Tour_Package_to_Tour_Review_Table.resx">
+      <DependentUpon>202308031724241_Create_1_to_Many_Relation_between_Tour_Package_to_Tour_Review_Table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

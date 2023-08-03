@@ -25,5 +25,20 @@ namespace DAL.Database.Models
         [Required]
         public string Role { get; set; }
 
+
+        #region Relationship
+        /// <summary>
+        /// One User Can have many Feedbacks
+        /// </summary>
+        public virtual ICollection<Feedback> Feedbacks { get; set; }
+
+        public User()
+        {
+            Feedbacks = new List<Feedback>();
+        }
+
+        #endregion Relationship
+
+
     }
 }
