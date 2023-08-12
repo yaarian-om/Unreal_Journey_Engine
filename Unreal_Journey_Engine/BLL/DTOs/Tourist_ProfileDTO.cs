@@ -11,7 +11,7 @@ using System.Xml.Linq;
 
 namespace BLL.DTOs
 {
-    internal class Tourist_ProfileDTO
+    public class Tourist_ProfileDTO
     {
 
         public int Tourist_ID { get; set; }

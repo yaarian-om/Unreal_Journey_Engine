@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BLL.DTOs
 {
-    internal class FeedbackDTO
+    public class FeedbackDTO
     {
     }
 }

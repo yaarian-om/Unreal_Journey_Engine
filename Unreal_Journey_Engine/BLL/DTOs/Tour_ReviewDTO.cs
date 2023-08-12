@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BLL.DTOs
 {
-    internal class Tour_ReviewDTO
+    public class Tour_ReviewDTO
     {
     }
 }

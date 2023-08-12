@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Services
 {
-    internal class Tourist_ProfileService
+    public class Tourist_ProfileService
     {
         #region C R U D Operation
 

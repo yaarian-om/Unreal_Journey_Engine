@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BLL.DTOs
 {
-    internal class UserDTO
+    public class UserDTO
     {
 
         public int User_ID { get; set; }
