@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Database.Models
 {
-    internal class Tour_Package
+    public class Tour_Package
     {
 
         [Key]

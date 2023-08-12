@@ -23,3 +23,6 @@ D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Create_1_to_Many_Relation_between_User_to_Feedback_Table.resources
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Create_1_to_Many_Relation_between_Tourist_Profile_to_Tour_Review_Table.resources
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Create_1_to_Many_Relation_between_Tour_Package_to_Tour_Review_Table.resources
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Unknown_Update.resources
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Making_All_Tables_classes_PUBLIC.resources
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Unknown_update_2.resources

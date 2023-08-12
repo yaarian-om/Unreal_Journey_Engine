@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Database.Models
 {
-    internal class Feedback
+    public class Feedback
     {
 
         [Key]

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Database.Models
 {
-    internal class User
+    public class User
     {
 
         [Key]

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Database.Models
 {
-    internal class Tourist_Profile
+    public class Tourist_Profile
     {
 
         [Key]

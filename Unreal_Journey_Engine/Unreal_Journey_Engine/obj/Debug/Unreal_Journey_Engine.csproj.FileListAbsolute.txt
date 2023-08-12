@@ -71,3 +71,8 @@ D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\Unreal_Journey_En
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\Unreal_Journey_Engine\obj\Debug\Unreal_Journey_Engine.csproj.CopyComplete
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\Unreal_Journey_Engine\obj\Debug\Unreal_Journey_Engine.dll
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\Unreal_Journey_Engine\obj\Debug\Unreal_Journey_Engine.pdb
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\Unreal_Journey_Engine\bin\DAL.dll
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\Unreal_Journey_Engine\bin\AutoMapper.dll
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\Unreal_Journey_Engine\bin\DAL.pdb
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\Unreal_Journey_Engine\bin\DAL.dll.config
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\Unreal_Journey_Engine\bin\AutoMapper.xml
