@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Services
 {
-    internal class Tour_PackageService
+    public class Tour_PackageService
     {
         #region C R U D Operation
 
