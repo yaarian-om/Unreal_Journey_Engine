@@ -45,13 +45,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTOs\Admin_ProfileDTO.cs" />
     <Compile Include="DTOs\BookingDTO.cs" />
     <Compile Include="DTOs\FeedbackDTO.cs" />
+    <Compile Include="DTOs\Promotion_TableDTO.cs" />
     <Compile Include="DTOs\Tourist_ProfileDTO.cs" />
     <Compile Include="DTOs\Tour_PackageDTO.cs" />
     <Compile Include="DTOs\Tour_ReviewDTO.cs" />
     <Compile Include="DTOs\UserDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Admin_ProfileService.cs" />
+    <Compile Include="Services\Promotion_TableService.cs" />
     <Compile Include="Services\Tourist_ProfileService.cs" />
     <Compile Include="Services\Tour_PackageService.cs" />
   </ItemGroup>

@@ -21,5 +21,15 @@ namespace DAL
             return new Tour_PackageRepo();
         }
 
+        public static IRepo<Admin_Profile, int, bool> Admin_Profile_Repo_Access()
+        {
+            return new Admin_ProfileRepo();
+        }
+
+        public static IRepo<Promotion_Table, int, bool> Promotion_Table_Repo_Access()
+        {
+            return new Promotion_TableRepo();
+        }
+
     }
 }

@@ -9,16 +9,15 @@ using System.Web.Http;
 
 namespace Unreal_Journey_Engine.Controllers
 {
-    public class Tourist_ProfileController : ApiController
+    public class Admin_ProfileController : ApiController
     {
-
-        #region Get All Tourist
+        #region Get All Admin
         [HttpGet]
-        [Route("api/tourist/all")]
-        public HttpResponseMessage Get_All_Tourist()
+        [Route("api/admin/all")]
+        public HttpResponseMessage Get_All_Admins()
         {
 
-            var data = Tourist_ProfileService.Get();
+            var data = Admin_ProfileService.Get();
             if (data.Count > 0)
             {
                 return Request.CreateResponse(HttpStatusCode.OK, data);
@@ -33,17 +32,17 @@ namespace Unreal_Journey_Engine.Controllers
             }
 
         }
-        #endregion Get All Tourist
+        #endregion Get All Admin
 
-        #region Get Single Tourist
+        #region Get Single Admin
         [HttpGet]
-        [Route("api/tourist/{id}")]
+        [Route("api/admin/{id}")]
         public HttpResponseMessage Get(int id)
         {
             try
             {
-                var data = Tourist_ProfileService.Get(id);
-                if(data != null)
+                var data = Admin_ProfileService.Get(id);
+                if (data != null)
                 {
                     return Request.CreateResponse(HttpStatusCode.OK, data);
                 }
@@ -61,19 +60,19 @@ namespace Unreal_Journey_Engine.Controllers
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, ex.Message);
             }
         }
-        #endregion Get Single Tourist
+        #endregion Get Single Admin
 
         #region Signup / Create
         [HttpPost]
-        [Route("api/tourist/create")]
-        public HttpResponseMessage Create_Tourist_Profile(Tourist_ProfileDTO dto)
+        [Route("api/admin/create")]
+        public HttpResponseMessage Create_Admin(Admin_ProfileDTO dto)
         {
             try
             {
-                
+
                 if (dto != null)
                 {
-                    var decision = Tourist_ProfileService.Create(dto);
+                    var decision = Admin_ProfileService.Create(dto);
                     if (decision)
                     {
                         var responseMessage = new
@@ -90,13 +89,13 @@ namespace Unreal_Journey_Engine.Controllers
                         };
                         return Request.CreateResponse(HttpStatusCode.NotAcceptable, responseMessage);
                     }
-                    
+
                 }
                 else
                 {
                     var responseMessage = new
                     {
-                        Message = "Provide Tourist Data to Create Account"
+                        Message = "Provide Tour Data to Create Account"
                     };
                     return Request.CreateResponse(HttpStatusCode.PreconditionFailed, responseMessage);
                 }
@@ -110,20 +109,20 @@ namespace Unreal_Journey_Engine.Controllers
 
         #region Update
         [HttpPut]
-        [Route("api/tourist/update")]
-        public HttpResponseMessage Update_Tourist_Profile(Tourist_ProfileDTO dto)
+        [Route("api/admin/update")]
+        public HttpResponseMessage Update_Admin_Info(Admin_ProfileDTO dto)
         {
             try
             {
 
                 if (dto != null)
                 {
-                    var decision = Tourist_ProfileService.Update(dto);
+                    var decision = Admin_ProfileService.Update(dto);
                     if (decision)
                     {
                         var responseMessage = new
                         {
-                            Message = "Account Updated"
+                            Message = "Account Update"
                         };
                         return Request.CreateResponse(HttpStatusCode.OK, responseMessage);
                     }
@@ -141,7 +140,7 @@ namespace Unreal_Journey_Engine.Controllers
                 {
                     var responseMessage = new
                     {
-                        Message = "Provide Tourist Data to Create Account"
+                        Message = "Provide Tour Data to Create Account"
                     };
                     return Request.CreateResponse(HttpStatusCode.PreconditionFailed, responseMessage);
                 }
@@ -155,12 +154,12 @@ namespace Unreal_Journey_Engine.Controllers
 
         #region Delete
         [HttpDelete]
-        [Route("api/tourist/delete/{id}")]
-        public HttpResponseMessage Delete_Tourist_Profile(int id)
+        [Route("api/admin/delete/{id}")]
+        public HttpResponseMessage Delete_Admin_Info(int id)
         {
             try
             {
-                var data = Tourist_ProfileService.Delete(id);
+                var data = Admin_ProfileService.Delete(id);
                 if (data)
                 {
                     return Request.CreateResponse(HttpStatusCode.OK, data);
@@ -180,10 +179,6 @@ namespace Unreal_Journey_Engine.Controllers
             }
         }
         #endregion Delete
-
-        // Feature Api Needed
-
-
 
     }
 }

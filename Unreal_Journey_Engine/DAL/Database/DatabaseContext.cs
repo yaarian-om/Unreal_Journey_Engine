@@ -16,7 +16,8 @@ namespace DAL.Database
         public DbSet<Booking> Bookings { get; set; }
         public DbSet<Tour_Review> Tour_Reviews { get; set; }
         public DbSet<Feedback> Feedbacks { get; set; }
-
-
+        public DbSet<Admin_Profile> Admin_Profiles { get; set; }
+        public DbSet<Promotion_Table> Promotion_Tables { get; set; }
+        
     }
 }
