@@ -26,3 +26,33 @@ D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Unknown_Update.resources
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Making_All_Tables_classes_PUBLIC.resources
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Unknown_update_2.resources
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\bin\Debug\DAL.dll.config
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\bin\Debug\DAL.dll
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\bin\Debug\DAL.pdb
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\bin\Debug\EntityFramework.dll
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\bin\Debug\EntityFramework.xml
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Create_User_Table.resources
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Create_Tourist_Profile_Table.resources
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Create_Tour_Package_Table.resources
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Create_Booking_Table.resources
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Create_Tour_Review_Table.resources
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Create_Feedback_Table.resources
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Create_1_to_1_Relation_between_User_to_Tourist_Profile_Table.resources
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Create_1_to_Many_Relation_between_Tourist_Profile_to_Booking_Table.resources
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Create_1_to_Many_Relation_between_Tour_Package_to_Booking_Table.resources
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Create_1_to_Many_Relation_between_User_to_Feedback_Table.resources
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Create_1_to_Many_Relation_between_Tourist_Profile_to_Tour_Review_Table.resources
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Create_1_to_Many_Relation_between_Tour_Package_to_Tour_Review_Table.resources
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Unknown_Update.resources
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Making_All_Tables_classes_PUBLIC.resources
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Unknown_update_2.resources
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.dll
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.pdb
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Deleting_Relationship_Admin_Profile_Table.resources
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.UnknowX.resources

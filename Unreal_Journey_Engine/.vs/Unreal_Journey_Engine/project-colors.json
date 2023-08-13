@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "ae2b5312-6b36-4c76-b814-e8145b00ff03": {
+      "ProjectGuid": "ae2b5312-6b36-4c76-b814-e8145b00ff03",
+      "DisplayName": "Unreal_Journey_Engine",
+      "ColorIndex": 0
+    },
+    "bc15762f-3092-41f7-a239-f78ac9595f4f": {
+      "ProjectGuid": "bc15762f-3092-41f7-a239-f78ac9595f4f",
+      "DisplayName": "BLL",
+      "ColorIndex": 1
+    },
+    "1a721a87-2664-4114-8923-272d60222795": {
+      "ProjectGuid": "1a721a87-2664-4114-8923-272d60222795",
+      "DisplayName": "DAL",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

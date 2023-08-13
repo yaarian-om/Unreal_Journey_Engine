@@ -12,3 +12,17 @@ D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\obj\Debug\BLL
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\obj\Debug\BLL.csproj.CopyComplete
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\obj\Debug\BLL.dll
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\obj\Debug\BLL.pdb
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\obj\Debug\BLL.dll
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\obj\Debug\BLL.pdb
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\BLL.dll
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\BLL.pdb
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\AutoMapper.dll
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\DAL.dll
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\EntityFramework.dll
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\DAL.pdb
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\DAL.dll.config
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\AutoMapper.xml
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\EntityFramework.xml
+D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\obj\Debug\BLL.csproj.CopyComplete
