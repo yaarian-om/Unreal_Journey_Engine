@@ -57,7 +57,7 @@ namespace BLL.Services
             }
         }
 
-        #endregion Get Single Tour Packages
+        #endregion Get Single Tour Package
 
         #region Create Tour Package
 

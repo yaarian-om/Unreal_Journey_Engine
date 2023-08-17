@@ -31,5 +31,25 @@ namespace DAL
             return new Promotion_TableRepo();
         }
 
+        public static IRepo<User, int, bool> User_Repo_Access()
+        {
+            return new UserRepo();
+        }
+
+        public static IRepo<Tour_Review, int, bool> Tour_Review_Repo_Access()
+        {
+            return new Tour_ReviewRepo();
+        }
+
+        public static IRepo<Feedback, int, bool> Feedback_Repo_Access()
+        {
+            return new FeedbackRepo();
+        }
+
+        public static IRepo<Booking, int, bool> Booking_Repo_Access()
+        {
+            return new BookingRepo();
+        }
+
     }
 }
