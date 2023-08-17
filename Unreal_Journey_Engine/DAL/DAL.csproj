@@ -129,14 +129,26 @@
     <Compile Include="Migrations\202308130647574_UnknowX.designer.cs">
       <DependentUpon>202308130647574_UnknowX.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202308171818460_Tourist_DAL_Complete.cs" />
+    <Compile Include="Migrations\202308171818460_Tourist_DAL_Complete.designer.cs">
+      <DependentUpon>202308171818460_Tourist_DAL_Complete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308171901132_Unknown_Update_18_Aug.cs" />
+    <Compile Include="Migrations\202308171901132_Unknown_Update_18_Aug.designer.cs">
+      <DependentUpon>202308171901132_Unknown_Update_18_Aug.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepoAccessFactory.cs" />
     <Compile Include="Repos\Admin_ProfileRepo.cs" />
+    <Compile Include="Repos\BookingRepo.cs" />
+    <Compile Include="Repos\FeedbackRepo.cs" />
     <Compile Include="Repos\Promotion_TableRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
     <Compile Include="Repos\Tourist_ProfileRepo.cs" />
     <Compile Include="Repos\Tour_PackageRepo.cs" />
+    <Compile Include="Repos\Tour_ReviewRepo.cs" />
+    <Compile Include="Repos\UserRepo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -194,6 +206,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202308130647574_UnknowX.resx">
       <DependentUpon>202308130647574_UnknowX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308171818460_Tourist_DAL_Complete.resx">
+      <DependentUpon>202308171818460_Tourist_DAL_Complete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308171901132_Unknown_Update_18_Aug.resx">
+      <DependentUpon>202308171901132_Unknown_Update_18_Aug.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

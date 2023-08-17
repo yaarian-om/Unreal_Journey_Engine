@@ -56,3 +56,7 @@ D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.dll
 D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.pdb
 D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Deleting_Relationship_Admin_Profile_Table.resources
 D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.UnknowX.resources
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Deleting_Relationship_Admin_Profile_Table.resources
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.UnknowX.resources
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Tourist_DAL_Complete.resources
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Unknown_Update_18_Aug.resources
