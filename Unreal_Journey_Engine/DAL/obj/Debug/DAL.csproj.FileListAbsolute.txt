@@ -60,3 +60,4 @@ D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.UnknowX.resources
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Tourist_DAL_Complete.resources
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Unknown_Update_18_Aug.resources
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.First_Update_of_19_Aug_23.resources

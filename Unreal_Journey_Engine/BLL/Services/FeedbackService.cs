@@ -22,11 +22,7 @@ namespace BLL.Services
             var data = RepoAccessFactory.Feedback_Repo_Access().Get();
             if (data.Count > 0)
             {
-                var config = new MapperConfiguration(cfg =>
-                {
-                    cfg.CreateMap<Feedback, FeedbackDTO>();
-                });
-                var mapper = new Mapper(config);
+                var mapper = MapperService<Feedback, FeedbackDTO>.GetMapper();
                 var TourDTO = mapper.Map<List<FeedbackDTO>>(data);
                 return TourDTO;
             }
@@ -45,10 +41,7 @@ namespace BLL.Services
             var data = RepoAccessFactory.Feedback_Repo_Access().Get(id);
             if (data != null)
             {
-                var config = new MapperConfiguration(cfg => {
-                    cfg.CreateMap<Feedback, FeedbackDTO>();
-                });
-                var mapper = new Mapper(config);
+                var mapper = MapperService<Feedback, FeedbackDTO>.GetMapper();
                 var TourDTO = mapper.Map<FeedbackDTO>(data);
                 return TourDTO;
             }
@@ -67,11 +60,7 @@ namespace BLL.Services
             // Convert to Feedback, from Feedback_DTO
             if (dto != null)
             {
-                var config = new MapperConfiguration(cfg =>
-                {
-                    cfg.CreateMap<FeedbackDTO, Feedback>();
-                });
-                var mapper = new Mapper(config);
+                var mapper = MapperService<FeedbackDTO, Feedback>.GetMapper();
                 var Tour_Data = mapper.Map<Feedback>(dto);
 
                 return RepoAccessFactory.Feedback_Repo_Access().Create(Tour_Data);
@@ -107,11 +96,7 @@ namespace BLL.Services
         {
             if (dto != null)
             {
-                var config = new MapperConfiguration(cfg =>
-                {
-                    cfg.CreateMap<FeedbackDTO, Feedback>();
-                });
-                var mapper = new Mapper(config);
+                var mapper = MapperService<FeedbackDTO, Feedback>.GetMapper();
                 var Tour_Data = mapper.Map<Feedback>(dto);
                 return RepoAccessFactory.Feedback_Repo_Access().Update(Tour_Data);
             }

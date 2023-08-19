@@ -23,11 +23,7 @@ namespace BLL.Services
             var data = RepoAccessFactory.Tour_Review_Repo_Access().Get();
             if (data.Count > 0)
             {
-                var config = new MapperConfiguration(cfg =>
-                {
-                    cfg.CreateMap<Tour_Review, Tour_ReviewDTO>();
-                });
-                var mapper = new Mapper(config);
+                var mapper = MapperService<Tour_Review, Tour_ReviewDTO>.GetMapper();
                 var TourDTO = mapper.Map<List<Tour_ReviewDTO>>(data);
                 return TourDTO;
             }
@@ -46,10 +42,7 @@ namespace BLL.Services
             var data = RepoAccessFactory.Tour_Review_Repo_Access().Get(id);
             if (data != null)
             {
-                var config = new MapperConfiguration(cfg => {
-                    cfg.CreateMap<Tour_Review, Tour_ReviewDTO>();
-                });
-                var mapper = new Mapper(config);
+                var mapper = MapperService<Tour_Review, Tour_ReviewDTO>.GetMapper();
                 var TourDTO = mapper.Map<Tour_ReviewDTO>(data);
                 return TourDTO;
             }
@@ -68,11 +61,7 @@ namespace BLL.Services
             // Convert to Tour_Review, from Tour_Review_DTO
             if (dto != null)
             {
-                var config = new MapperConfiguration(cfg =>
-                {
-                    cfg.CreateMap<Tour_ReviewDTO, Tour_Review>();
-                });
-                var mapper = new Mapper(config);
+                var mapper = MapperService<Tour_ReviewDTO, Tour_Review>.GetMapper();
                 var Tour_Data = mapper.Map<Tour_Review>(dto);
 
                 return RepoAccessFactory.Tour_Review_Repo_Access().Create(Tour_Data);
@@ -108,11 +97,7 @@ namespace BLL.Services
         {
             if (dto != null)
             {
-                var config = new MapperConfiguration(cfg =>
-                {
-                    cfg.CreateMap<Tour_ReviewDTO, Tour_Review>();
-                });
-                var mapper = new Mapper(config);
+                var mapper = MapperService<Tour_ReviewDTO, Tour_Review>.GetMapper();
                 var Tour_Data = mapper.Map<Tour_Review>(dto);
                 return RepoAccessFactory.Tour_Review_Repo_Access().Update(Tour_Data);
             }

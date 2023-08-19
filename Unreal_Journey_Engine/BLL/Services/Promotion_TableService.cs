@@ -21,11 +21,7 @@ namespace BLL.Services
             var data = RepoAccessFactory.Promotion_Table_Repo_Access().Get();
             if (data.Count > 0)
             {
-                var config = new MapperConfiguration(cfg =>
-                {
-                    cfg.CreateMap<Promotion_Table, Promotion_TableDTO>();
-                });
-                var mapper = new Mapper(config);
+                var mapper = MapperService<Promotion_Table, Promotion_TableDTO>.GetMapper();
                 var TouristDTO = mapper.Map<List<Promotion_TableDTO>>(data);
                 return TouristDTO;
             }
@@ -44,10 +40,7 @@ namespace BLL.Services
             var data = RepoAccessFactory.Promotion_Table_Repo_Access().Get(id);
             if (data != null)
             {
-                var config = new MapperConfiguration(cfg => {
-                    cfg.CreateMap<Promotion_Table, Promotion_TableDTO>();
-                });
-                var mapper = new Mapper(config);
+                var mapper = MapperService<Promotion_Table, Promotion_TableDTO>.GetMapper();
                 var TouristDTO = mapper.Map<Promotion_TableDTO>(data);
                 return TouristDTO;
             }
@@ -66,12 +59,7 @@ namespace BLL.Services
             // Convert to Promotion_Table, from Promotion_Table_DTO
             if (dto != null)
             {
-                 
-                var config = new MapperConfiguration(cfg =>
-                {
-                    cfg.CreateMap<Promotion_TableDTO, Promotion_Table>();
-                });
-                var mapper = new Mapper(config);
+                var mapper = MapperService<Promotion_TableDTO, Promotion_Table>.GetMapper();
                 var Tourist_Data = mapper.Map<Promotion_Table>(dto);
 
                 return RepoAccessFactory.Promotion_Table_Repo_Access().Create(Tourist_Data);
@@ -107,12 +95,7 @@ namespace BLL.Services
         {
             if (dto != null)
             {
-
-                var config = new MapperConfiguration(cfg =>
-                {
-                    cfg.CreateMap<Promotion_TableDTO, Promotion_Table>();
-                });
-                var mapper = new Mapper(config);
+                var mapper = MapperService<Promotion_TableDTO, Promotion_Table>.GetMapper();
                 var Tourist_Data = mapper.Map<Promotion_Table>(dto);
                 return RepoAccessFactory.Promotion_Table_Repo_Access().Update(Tourist_Data);
             }

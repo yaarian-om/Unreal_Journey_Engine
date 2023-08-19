@@ -21,11 +21,8 @@ namespace BLL.Services
             var data = RepoAccessFactory.Tourist_Profile_Repo_Access().Get();
             if (data.Count > 0)
             {
-                var config = new MapperConfiguration(cfg =>
-                {
-                    cfg.CreateMap<Tourist_Profile, Tourist_ProfileDTO>();
-                });
-                var mapper = new Mapper(config);
+                
+                var mapper = MapperService<Tourist_Profile, Tourist_ProfileDTO>.GetMapper();
                 var TouristDTO = mapper.Map<List<Tourist_ProfileDTO>>(data);
                 return TouristDTO;
             }
@@ -44,10 +41,7 @@ namespace BLL.Services
             var data = RepoAccessFactory.Tourist_Profile_Repo_Access().Get(id);
             if(data != null)
             {
-                var config = new MapperConfiguration(cfg => {
-                    cfg.CreateMap<Tourist_Profile, Tourist_ProfileDTO>();
-                });
-                var mapper = new Mapper(config);
+                var mapper = MapperService<Tourist_Profile, Tourist_ProfileDTO>.GetMapper();
                 var TouristDTO = mapper.Map<Tourist_ProfileDTO>(data);
                 return TouristDTO;
             }
@@ -71,11 +65,7 @@ namespace BLL.Services
                 // This Default image will be set also in the frontend,
                 // if he/she do not wanted to update image, then this will come
                 dto.Image = "temp.svg";
-                var config = new MapperConfiguration(cfg =>
-                {
-                    cfg.CreateMap<Tourist_ProfileDTO, Tourist_Profile>();
-                });
-                var mapper = new Mapper(config);
+                var mapper = MapperService<Tourist_ProfileDTO, Tourist_Profile>.GetMapper();
                 var Tourist_Data = mapper.Map<Tourist_Profile>(dto);
 
                 return RepoAccessFactory.Tourist_Profile_Repo_Access().Create(Tourist_Data);
@@ -126,11 +116,7 @@ namespace BLL.Services
                 }
 
 
-                var config = new MapperConfiguration(cfg =>
-                {
-                    cfg.CreateMap<Tourist_ProfileDTO, Tourist_Profile>();
-                });
-                var mapper = new Mapper(config);
+                var mapper = MapperService<Tourist_ProfileDTO, Tourist_Profile>.GetMapper();
                 var Tourist_Data = mapper.Map<Tourist_Profile>(dto);
                 return RepoAccessFactory.Tourist_Profile_Repo_Access().Update(Tourist_Data);
             }
@@ -146,7 +132,102 @@ namespace BLL.Services
 
 
         // Feature Api Needed
-        // Update Image()
+
+        #region Feature APIs
+
+        #region Upload_Image
+
+        public static bool Upload_Image(byte[] image, string imageName, int Tourist_ID)
+        {
+            try
+            {
+                var data = RepoAccessFactory.Tourist_Profile_Repo_Access().Get(Tourist_ID);
+                if (data != null)
+                {
+                    // Using DateTime Stamp to avoid Same name or Identical Names
+                    var currentTime = DateTime.Now;
+                    var final_imageName = (currentTime.ToString()) + imageName;
+                    data.Image = final_imageName;
+                    // Sending New Image name to the Server
+                    var update_decision = RepoAccessFactory.Tourist_Profile_Repo_Access().Update(data);
+                    if (update_decision)
+                    {
+                        // Send the Image and Image Name to the Repo
+                        var upload_decision = RepoAccessFactory.Tourist_Profile_Image_Repo_Access().Upload_Image(image, final_imageName);
+                        if (upload_decision)
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                        
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    return false;
+                }
+            }catch (Exception ex)
+            {
+                Print_in_Red("Tourist_ProfileService Error = " + ex.Message);
+                return false;
+            }
+        }
+
+        #endregion Upload_Image
+
+        #region Get Image
+        public static byte[] Get_Image(int Tourist_ID)
+        {
+            var data = RepoAccessFactory.Tourist_Profile_Repo_Access().Get(Tourist_ID);
+            var imageName = data.Image.ToString();
+            if (data != null)
+            {
+                return RepoAccessFactory.Tourist_Profile_Image_Repo_Access().Get_Image(imageName);
+            }
+            else
+            {
+                return null;
+            }
+
+            // Else Null
+        }
+        #endregion Get Image
+
+
+
+        #endregion Feature APIs
+
+
+
+
+
+
+        #region Text Color Configuration in CONSOLE
+        public static void Print_in_Red(string text)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine(text);
+            Console.ResetColor();
+        }
+
+        public static void Print_in_Green(string text)
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine(text);
+            Console.ResetColor();
+        }
+
+
+
+
+        #endregion Text Color Configuration in CONSOLE
 
 
 

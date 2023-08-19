@@ -6,15 +6,18 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace Unreal_Journey_Engine.Controllers
 {
+    [EnableCors("*", "*", "*")]
+    [RoutePrefix("api/user")]
     public class UserController : ApiController
     {
 
         #region Get All Users
         [HttpGet]
-        [Route("api/user/all")]
+        [Route("all")]
         public HttpResponseMessage Get_All_Users()
         {
 
@@ -37,7 +40,7 @@ namespace Unreal_Journey_Engine.Controllers
 
         #region Get Single User
         [HttpGet]
-        [Route("api/user/{id}")]
+        [Route("{id}")]
         public HttpResponseMessage Get(int id)
         {
             try
@@ -65,7 +68,7 @@ namespace Unreal_Journey_Engine.Controllers
 
         #region Signup / Create
         [HttpPost]
-        [Route("api/user/create")]
+        [Route("create")]
         public HttpResponseMessage Create_User(UserDTO dto)
         {
             try
@@ -110,7 +113,7 @@ namespace Unreal_Journey_Engine.Controllers
 
         #region Update
         [HttpPut]
-        [Route("api/user/update")]
+        [Route("update")]
         public HttpResponseMessage Update_User_Info(UserDTO dto)
         {
             try
@@ -155,7 +158,7 @@ namespace Unreal_Journey_Engine.Controllers
 
         #region Delete
         [HttpDelete]
-        [Route("api/user/delete/{id}")]
+        [Route("delete/{id}")]
         public HttpResponseMessage Delete_User_Info(int id)
         {
             try

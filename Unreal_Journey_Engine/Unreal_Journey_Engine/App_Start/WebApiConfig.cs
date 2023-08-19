@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
+
 namespace Unreal_Journey_Engine
 {
     public static class WebApiConfig
@@ -19,6 +20,10 @@ namespace Unreal_Journey_Engine
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.EnableCors();
+
+
         }
     }
 }

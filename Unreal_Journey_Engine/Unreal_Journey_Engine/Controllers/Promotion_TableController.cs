@@ -6,14 +6,17 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace Unreal_Journey_Engine.Controllers
 {
+    [EnableCors("*", "*", "*")]
+    [RoutePrefix("api/promotion")]
     public class Promotion_TableController : ApiController
     {
         #region Get All Promotion
         [HttpGet]
-        [Route("api/promotion/all")]
+        [Route("all")]
         public HttpResponseMessage Get_All_Promotion()
         {
 
@@ -36,7 +39,7 @@ namespace Unreal_Journey_Engine.Controllers
 
         #region Get Single Promotion
         [HttpGet]
-        [Route("api/promotion/{id}")]
+        [Route("{id}")]
         public HttpResponseMessage Get(int id)
         {
             try
@@ -64,7 +67,7 @@ namespace Unreal_Journey_Engine.Controllers
 
         #region Signup / Create
         [HttpPost]
-        [Route("api/promotion/create")]
+        [Route("create")]
         public HttpResponseMessage Create_Promotion(Promotion_TableDTO dto)
         {
             try
@@ -109,7 +112,7 @@ namespace Unreal_Journey_Engine.Controllers
 
         #region Update
         [HttpPut]
-        [Route("api/promotion/update")]
+        [Route("update")]
         public HttpResponseMessage Update_Promotion(Promotion_TableDTO dto)
         {
             try
@@ -154,7 +157,7 @@ namespace Unreal_Journey_Engine.Controllers
 
         #region Delete
         [HttpDelete]
-        [Route("api/promotion/delete/{id}")]
+        [Route("delete/{id}")]
         public HttpResponseMessage Delete_Promotion(int id)
         {
             try

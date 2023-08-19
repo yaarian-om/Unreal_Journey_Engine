@@ -6,15 +6,18 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace Unreal_Journey_Engine.Controllers
 {
+    [EnableCors("*", "*", "*")]
+    [RoutePrefix("api/tour/review")]
     public class Tour_ReviewController : ApiController
     {
 
         #region Get All Tour Reviews
         [HttpGet]
-        [Route("api/tour/review/all")]
+        [Route("all")]
         public HttpResponseMessage Get_All_Tour_Reviews()
         {
 
@@ -37,7 +40,7 @@ namespace Unreal_Journey_Engine.Controllers
 
         #region Get Single Tour
         [HttpGet]
-        [Route("api/tour/review/{id}")]
+        [Route("{id}")]
         public HttpResponseMessage Get(int id)
         {
             try
@@ -65,7 +68,7 @@ namespace Unreal_Journey_Engine.Controllers
 
         #region Post / Create
         [HttpPost]
-        [Route("api/tour/review/create")]
+        [Route("create")]
         public HttpResponseMessage Create_Tour_Review(Tour_ReviewDTO dto)
         {
             try
@@ -110,7 +113,7 @@ namespace Unreal_Journey_Engine.Controllers
 
         #region Update
         [HttpPut]
-        [Route("api/tour/review/update")]
+        [Route("update")]
         public HttpResponseMessage Update_Tour_Info(Tour_ReviewDTO dto)
         {
             try
@@ -155,7 +158,7 @@ namespace Unreal_Journey_Engine.Controllers
 
         #region Delete
         [HttpDelete]
-        [Route("api/tour/review/delete/{id}")]
+        [Route("delete/{id}")]
         public HttpResponseMessage Delete_Tour_Review(int id)
         {
             try

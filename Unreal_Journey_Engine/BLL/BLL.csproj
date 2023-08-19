@@ -57,6 +57,7 @@
     <Compile Include="Services\Admin_ProfileService.cs" />
     <Compile Include="Services\BookingService.cs" />
     <Compile Include="Services\FeedbackService.cs" />
+    <Compile Include="Services\MapperService.cs" />
     <Compile Include="Services\Promotion_TableService.cs" />
     <Compile Include="Services\Tourist_ProfileService.cs" />
     <Compile Include="Services\Tour_PackageService.cs" />

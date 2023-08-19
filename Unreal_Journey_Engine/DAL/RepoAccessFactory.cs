@@ -16,6 +16,11 @@ namespace DAL
             return new Tourist_ProfileRepo();
         }
 
+        public static I_image<Tourist_Profile, byte[],string, bool> Tourist_Profile_Image_Repo_Access()
+        {
+            return new Tourist_ProfileRepo();
+        }
+
         public static IRepo<Tour_Package, int, bool> Tour_Package_Repo_Access()
         {
             return new Tour_PackageRepo();

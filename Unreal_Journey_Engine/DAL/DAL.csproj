@@ -61,6 +61,7 @@
     <Compile Include="Database\Models\Tour_Review.cs" />
     <Compile Include="Database\Models\User.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
+    <Compile Include="Interfaces\I_image.cs" />
     <Compile Include="Migrations\202307311344447_Create_User_Table.cs" />
     <Compile Include="Migrations\202307311344447_Create_User_Table.designer.cs">
       <DependentUpon>202307311344447_Create_User_Table.cs</DependentUpon>
@@ -137,6 +138,10 @@
     <Compile Include="Migrations\202308171901132_Unknown_Update_18_Aug.designer.cs">
       <DependentUpon>202308171901132_Unknown_Update_18_Aug.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202308190647393_First_Update_of_19_Aug_23.cs" />
+    <Compile Include="Migrations\202308190647393_First_Update_of_19_Aug_23.designer.cs">
+      <DependentUpon>202308190647393_First_Update_of_19_Aug_23.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepoAccessFactory.cs" />
@@ -212,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202308171901132_Unknown_Update_18_Aug.resx">
       <DependentUpon>202308171901132_Unknown_Update_18_Aug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308190647393_First_Update_of_19_Aug_23.resx">
+      <DependentUpon>202308190647393_First_Update_of_19_Aug_23.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
