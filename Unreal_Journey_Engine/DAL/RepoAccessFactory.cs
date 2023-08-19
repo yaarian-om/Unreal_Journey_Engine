@@ -3,6 +3,7 @@ using DAL.Interfaces;
 using DAL.Repos;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -54,6 +55,19 @@ namespace DAL
         public static IRepo<Booking, int, bool> Booking_Repo_Access()
         {
             return new BookingRepo();
+        }
+
+        public static IRepo<User, int, bool> UserDataAccess()
+        {
+            return new UserRepo();
+        }
+        public static IRepo<Token, int, Token> TokenDataAccess()
+        {
+            return new TokenRepo();
+        }
+        public static IAuth AuthDataAccess()
+        {
+            return new UserRepo();
         }
 
     }

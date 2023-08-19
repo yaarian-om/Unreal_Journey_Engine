@@ -18,6 +18,8 @@ namespace DAL.Database
         public DbSet<Feedback> Feedbacks { get; set; }
         public DbSet<Admin_Profile> Admin_Profiles { get; set; }
         public DbSet<Promotion_Table> Promotion_Tables { get; set; }
+        public DbSet<Token> Tokens { get; set; }
+        public DbSet<Pin_Code> Pin_Codes { get; set; }
         
     }
 }

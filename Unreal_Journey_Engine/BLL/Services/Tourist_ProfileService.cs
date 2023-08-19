@@ -200,7 +200,22 @@ namespace BLL.Services
         }
         #endregion Get Image
 
+        #region Get Tourist By User_ID
 
+        public static Tourist_ProfileDTO Get_by_User_ID(int id)
+        {
+            var touristProfile = (from profile in RepoAccessFactory.Tourist_Profile_Repo_Access().Get()
+                                  where profile.User_ID == id
+                                  select profile).SingleOrDefault();
+
+            var mapper = MapperService<Tourist_Profile, Tourist_ProfileDTO>.GetMapper();
+            var TouristDTO = mapper.Map<Tourist_ProfileDTO>(touristProfile);
+
+            return (touristProfile != null)? TouristDTO : null;
+        }
+
+
+        #endregion Get Tourist By User_ID
 
         #endregion Feature APIs
 
