@@ -22,11 +22,7 @@ namespace BLL.Services
             var data = RepoAccessFactory.Booking_Repo_Access().Get();
             if (data.Count > 0)
             {
-                var config = new MapperConfiguration(cfg =>
-                {
-                    cfg.CreateMap<Booking, BookingDTO>();
-                });
-                var mapper = new Mapper(config);
+                var mapper = MapperService<Booking, BookingDTO>.GetMapper();
                 var TourDTO = mapper.Map<List<BookingDTO>>(data);
                 return TourDTO;
             }
@@ -45,10 +41,7 @@ namespace BLL.Services
             var data = RepoAccessFactory.Booking_Repo_Access().Get(id);
             if (data != null)
             {
-                var config = new MapperConfiguration(cfg => {
-                    cfg.CreateMap<Booking, BookingDTO>();
-                });
-                var mapper = new Mapper(config);
+                var mapper = MapperService<Booking, BookingDTO>.GetMapper();
                 var TourDTO = mapper.Map<BookingDTO>(data);
                 return TourDTO;
             }
@@ -67,11 +60,7 @@ namespace BLL.Services
             // Convert to Booking, from Booking_DTO
             if (dto != null)
             {
-                var config = new MapperConfiguration(cfg =>
-                {
-                    cfg.CreateMap<BookingDTO, Booking>();
-                });
-                var mapper = new Mapper(config);
+                var mapper = MapperService<BookingDTO, Booking>.GetMapper();
                 var Tour_Data = mapper.Map<Booking>(dto);
 
                 return RepoAccessFactory.Booking_Repo_Access().Create(Tour_Data);
@@ -107,11 +96,7 @@ namespace BLL.Services
         {
             if (dto != null)
             {
-                var config = new MapperConfiguration(cfg =>
-                {
-                    cfg.CreateMap<BookingDTO, Booking>();
-                });
-                var mapper = new Mapper(config);
+                var mapper = MapperService<BookingDTO, Booking>.GetMapper();
                 var Tour_Data = mapper.Map<Booking>(dto);
                 return RepoAccessFactory.Booking_Repo_Access().Update(Tour_Data);
             }

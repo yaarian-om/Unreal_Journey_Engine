@@ -6,16 +6,19 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace Unreal_Journey_Engine.Controllers
 {
+    [EnableCors("*", "*", "*")]
+    [RoutePrefix("api/feedback")]
     public class FeedbackController : ApiController
     {
 
 
         #region Get All Feedbacks
         [HttpGet]
-        [Route("api/feedback/all")]
+        [Route("all")]
         public HttpResponseMessage Get_All_Feedbacks()
         {
 
@@ -38,7 +41,7 @@ namespace Unreal_Journey_Engine.Controllers
 
         #region Get Single Feedback
         [HttpGet]
-        [Route("api/feedback/{id}")]
+        [Route("{id}")]
         public HttpResponseMessage Get(int id)
         {
             try
@@ -66,7 +69,7 @@ namespace Unreal_Journey_Engine.Controllers
 
         #region Post / Create
         [HttpPost]
-        [Route("api/feedback/create")]
+        [Route("create")]
         public HttpResponseMessage Create_Feedback(FeedbackDTO dto)
         {
             try
@@ -111,7 +114,7 @@ namespace Unreal_Journey_Engine.Controllers
 
         #region Update
         [HttpPut]
-        [Route("api/feedback/update")]
+        [Route("update")]
         public HttpResponseMessage Update_Feedback_Info(FeedbackDTO dto)
         {
             try
@@ -156,7 +159,7 @@ namespace Unreal_Journey_Engine.Controllers
 
         #region Delete
         [HttpDelete]
-        [Route("api/feedback/delete/{id}")]
+        [Route("delete/{id}")]
         public HttpResponseMessage Delete_Feedback_Info(int id)
         {
             try

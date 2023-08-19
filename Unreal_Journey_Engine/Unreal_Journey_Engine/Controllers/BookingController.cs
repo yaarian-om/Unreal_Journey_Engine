@@ -6,16 +6,19 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace Unreal_Journey_Engine.Controllers
 {
+    [EnableCors("*", "*", "*")]
+    [RoutePrefix("api/booking")]
     public class BookingController : ApiController
     {
 
 
         #region Get All Bookings
         [HttpGet]
-        [Route("api/booking/all")]
+        [Route("all")]
         public HttpResponseMessage Get_All_Bookings()
         {
 
@@ -38,7 +41,7 @@ namespace Unreal_Journey_Engine.Controllers
 
         #region Get Single Booking
         [HttpGet]
-        [Route("api/booking/{id}")]
+        [Route("{id}")]
         public HttpResponseMessage Get(int id)
         {
             try
@@ -66,7 +69,7 @@ namespace Unreal_Journey_Engine.Controllers
 
         #region  Create
         [HttpPost]
-        [Route("api/booking/create")]
+        [Route("create")]
         public HttpResponseMessage Create_Booking(BookingDTO dto)
         {
             try
@@ -111,7 +114,7 @@ namespace Unreal_Journey_Engine.Controllers
 
         #region Update
         [HttpPut]
-        [Route("api/booking/update")]
+        [Route("update")]
         public HttpResponseMessage Update_Booking_Info(BookingDTO dto)
         {
             try
@@ -156,7 +159,7 @@ namespace Unreal_Journey_Engine.Controllers
 
         #region Delete
         [HttpDelete]
-        [Route("api/booking/delete/{id}")]
+        [Route("delete/{id}")]
         public HttpResponseMessage Delete_Booking_Info(int id)
         {
             try

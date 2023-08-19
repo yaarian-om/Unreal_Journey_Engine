@@ -21,11 +21,7 @@ namespace BLL.Services
             var data = RepoAccessFactory.Admin_Profile_Repo_Access().Get();
             if (data.Count > 0)
             {
-                var config = new MapperConfiguration(cfg =>
-                {
-                    cfg.CreateMap<Admin_Profile, Admin_ProfileDTO>();
-                });
-                var mapper = new Mapper(config);
+                var mapper = MapperService<Admin_Profile, Admin_ProfileDTO>.GetMapper();
                 var TourDTO = mapper.Map<List<Admin_ProfileDTO>>(data);
                 return TourDTO;
             }
@@ -44,10 +40,7 @@ namespace BLL.Services
             var data = RepoAccessFactory.Admin_Profile_Repo_Access().Get(id);
             if (data != null)
             {
-                var config = new MapperConfiguration(cfg => {
-                    cfg.CreateMap<Admin_Profile, Admin_ProfileDTO>();
-                });
-                var mapper = new Mapper(config);
+                var mapper = MapperService<Admin_Profile, Admin_ProfileDTO>.GetMapper();
                 var TourDTO = mapper.Map<Admin_ProfileDTO>(data);
                 return TourDTO;
             }
@@ -71,11 +64,7 @@ namespace BLL.Services
                 // This Default image will be set also in the frontend,
                 // if he/she do not wanted to update image, then this will come
                 dto.Image = "temp_tour.svg";
-                var config = new MapperConfiguration(cfg =>
-                {
-                    cfg.CreateMap<Admin_ProfileDTO, Admin_Profile>();
-                });
-                var mapper = new Mapper(config);
+                var mapper = MapperService<Admin_ProfileDTO, Admin_Profile>.GetMapper();
                 var Tour_Data = mapper.Map<Admin_Profile>(dto);
 
                 return RepoAccessFactory.Admin_Profile_Repo_Access().Create(Tour_Data);
@@ -124,13 +113,7 @@ namespace BLL.Services
                     // Making the Image_Name Unique
                     dto.Image = (currentTime.ToString()) + dto.Image;
                 }
-
-
-                var config = new MapperConfiguration(cfg =>
-                {
-                    cfg.CreateMap<Admin_ProfileDTO, Admin_Profile>();
-                });
-                var mapper = new Mapper(config);
+                var mapper = MapperService<Admin_ProfileDTO, Admin_Profile>.GetMapper();
                 var Tour_Data = mapper.Map<Admin_Profile>(dto);
                 return RepoAccessFactory.Admin_Profile_Repo_Access().Update(Tour_Data);
             }

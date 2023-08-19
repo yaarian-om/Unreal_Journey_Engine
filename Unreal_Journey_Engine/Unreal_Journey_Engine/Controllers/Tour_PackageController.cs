@@ -6,15 +6,18 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace Unreal_Journey_Engine.Controllers
 {
+    [EnableCors("*", "*", "*")]
+    [RoutePrefix("api/tour")]
     public class Tour_PackageController : ApiController
     {
 
         #region Get All Tours
         [HttpGet]
-        [Route("api/tour/all")]
+        [Route("all")]
         public HttpResponseMessage Get_All_Tours()
         {
 
@@ -37,7 +40,7 @@ namespace Unreal_Journey_Engine.Controllers
 
         #region Get Single Tour
         [HttpGet]
-        [Route("api/tour/{id}")]
+        [Route("{id}")]
         public HttpResponseMessage Get(int id)
         {
             try
@@ -65,7 +68,7 @@ namespace Unreal_Journey_Engine.Controllers
 
         #region Signup / Create
         [HttpPost]
-        [Route("api/tour/create")]
+        [Route("create")]
         public HttpResponseMessage Create_Tour_Package(Tour_PackageDTO dto)
         {
             try
@@ -110,7 +113,7 @@ namespace Unreal_Journey_Engine.Controllers
 
         #region Update
         [HttpPut]
-        [Route("api/tour/update")]
+        [Route("update")]
         public HttpResponseMessage Update_Tour_Info(Tour_PackageDTO dto)
         {
             try
@@ -155,7 +158,7 @@ namespace Unreal_Journey_Engine.Controllers
 
         #region Delete
         [HttpDelete]
-        [Route("api/tour/delete/{id}")]
+        [Route("delete/{id}")]
         public HttpResponseMessage Delete_Tour_Info(int id)
         {
             try

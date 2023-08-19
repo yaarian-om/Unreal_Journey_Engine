@@ -6,14 +6,17 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace Unreal_Journey_Engine.Controllers
 {
+    [EnableCors("*", "*", "*")]
+    [RoutePrefix("api/admin")]
     public class Admin_ProfileController : ApiController
     {
         #region Get All Admin
         [HttpGet]
-        [Route("api/admin/all")]
+        [Route("all")]
         public HttpResponseMessage Get_All_Admins()
         {
 
@@ -36,7 +39,7 @@ namespace Unreal_Journey_Engine.Controllers
 
         #region Get Single Admin
         [HttpGet]
-        [Route("api/admin/{id}")]
+        [Route("{id}")]
         public HttpResponseMessage Get(int id)
         {
             try
@@ -64,7 +67,7 @@ namespace Unreal_Journey_Engine.Controllers
 
         #region Signup / Create
         [HttpPost]
-        [Route("api/admin/create")]
+        [Route("create")]
         public HttpResponseMessage Create_Admin(Admin_ProfileDTO dto)
         {
             try
@@ -109,7 +112,7 @@ namespace Unreal_Journey_Engine.Controllers
 
         #region Update
         [HttpPut]
-        [Route("api/admin/update")]
+        [Route("update")]
         public HttpResponseMessage Update_Admin_Info(Admin_ProfileDTO dto)
         {
             try
@@ -154,7 +157,7 @@ namespace Unreal_Journey_Engine.Controllers
 
         #region Delete
         [HttpDelete]
-        [Route("api/admin/delete/{id}")]
+        [Route("delete/{id}")]
         public HttpResponseMessage Delete_Admin_Info(int id)
         {
             try

@@ -22,11 +22,7 @@ namespace BLL.Services
             var data = RepoAccessFactory.User_Repo_Access().Get();
             if (data.Count > 0)
             {
-                var config = new MapperConfiguration(cfg =>
-                {
-                    cfg.CreateMap<User, UserDTO>();
-                });
-                var mapper = new Mapper(config);
+                var mapper = MapperService<User, UserDTO>.GetMapper();
                 var TourDTO = mapper.Map<List<UserDTO>>(data);
                 return TourDTO;
             }
@@ -45,10 +41,7 @@ namespace BLL.Services
             var data = RepoAccessFactory.User_Repo_Access().Get(id);
             if (data != null)
             {
-                var config = new MapperConfiguration(cfg => {
-                    cfg.CreateMap<User, UserDTO>();
-                });
-                var mapper = new Mapper(config);
+                var mapper = MapperService<User, UserDTO>.GetMapper();
                 var TourDTO = mapper.Map<UserDTO>(data);
                 return TourDTO;
             }
@@ -67,11 +60,7 @@ namespace BLL.Services
             // Convert to User, from User_DTO
             if (dto != null)
             {
-                var config = new MapperConfiguration(cfg =>
-                {
-                    cfg.CreateMap<UserDTO, User>();
-                });
-                var mapper = new Mapper(config);
+                var mapper = MapperService<UserDTO, User>.GetMapper();
                 var Tour_Data = mapper.Map<User>(dto);
 
                 return RepoAccessFactory.User_Repo_Access().Create(Tour_Data);
@@ -107,11 +96,7 @@ namespace BLL.Services
         {
             if (dto != null)
             {
-                var config = new MapperConfiguration(cfg =>
-                {
-                    cfg.CreateMap<UserDTO, User>();
-                });
-                var mapper = new Mapper(config);
+                var mapper = MapperService<UserDTO, User>.GetMapper();
                 var Tour_Data = mapper.Map<User>(dto);
                 return RepoAccessFactory.User_Repo_Access().Update(Tour_Data);
             }

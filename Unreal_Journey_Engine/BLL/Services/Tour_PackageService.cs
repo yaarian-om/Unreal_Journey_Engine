@@ -21,11 +21,7 @@ namespace BLL.Services
             var data = RepoAccessFactory.Tour_Package_Repo_Access().Get();
             if (data.Count > 0)
             {
-                var config = new MapperConfiguration(cfg =>
-                {
-                    cfg.CreateMap<Tour_Package, Tour_PackageDTO>();
-                });
-                var mapper = new Mapper(config);
+                var mapper = MapperService<Tour_Package, Tour_PackageDTO>.GetMapper();
                 var TourDTO = mapper.Map<List<Tour_PackageDTO>>(data);
                 return TourDTO;
             }
@@ -44,10 +40,7 @@ namespace BLL.Services
             var data = RepoAccessFactory.Tour_Package_Repo_Access().Get(id);
             if (data != null)
             {
-                var config = new MapperConfiguration(cfg => {
-                    cfg.CreateMap<Tour_Package, Tour_PackageDTO>();
-                });
-                var mapper = new Mapper(config);
+                var mapper = MapperService<Tour_Package, Tour_PackageDTO>.GetMapper();
                 var TourDTO = mapper.Map<Tour_PackageDTO>(data);
                 return TourDTO;
             }
@@ -71,11 +64,7 @@ namespace BLL.Services
                 // This Default image will be set also in the frontend,
                 // if he/she do not wanted to update image, then this will come
                 dto.Image = "temp_tour.svg";
-                var config = new MapperConfiguration(cfg =>
-                {
-                    cfg.CreateMap<Tour_PackageDTO, Tour_Package>();
-                });
-                var mapper = new Mapper(config);
+                var mapper = MapperService<Tour_PackageDTO, Tour_Package>.GetMapper();
                 var Tour_Data = mapper.Map<Tour_Package>(dto);
 
                 return RepoAccessFactory.Tour_Package_Repo_Access().Create(Tour_Data);
@@ -125,12 +114,7 @@ namespace BLL.Services
                     dto.Image = (currentTime.ToString()) + dto.Image;
                 }
 
-
-                var config = new MapperConfiguration(cfg =>
-                {
-                    cfg.CreateMap<Tour_PackageDTO, Tour_Package>();
-                });
-                var mapper = new Mapper(config);
+                var mapper = MapperService<Tour_PackageDTO, Tour_Package>.GetMapper();
                 var Tour_Data = mapper.Map<Tour_Package>(dto);
                 return RepoAccessFactory.Tour_Package_Repo_Access().Update(Tour_Data);
             }
