@@ -3,14 +3,20 @@ using BLL.Services;
 using System;
 using System.CodeDom;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Security.Principal;
 using System.Web;
 using System.Web.Http;
+using System.Web.Http.Controllers;
 using System.Web.Http.Cors;
+using System.Web.UI.WebControls;
+using Unreal_Journey_Engine.AuthFilters;
 
 namespace Unreal_Journey_Engine.Controllers
 {
@@ -197,6 +203,7 @@ namespace Unreal_Journey_Engine.Controllers
 
         [HttpPost]
         [Route("image/upload")]
+        [Logged]
         public HttpResponseMessage Upload_Tourist_Profile_Image()
         {
             try
@@ -204,7 +211,10 @@ namespace Unreal_Journey_Engine.Controllers
                 //System.Web.HttpContext.Current.Session["Tourist_ID"] = 1;
                 // Using Session Here
                 //var current_user_ID = (int)System.Web.HttpContext.Current.Session["Tourist_ID"];
-                var current_user_ID = 1;
+                var current_user_ID = 0;
+                var authorizationHeader = Request.Headers.Authorization?.ToString();
+                current_user_ID = User_Info_Provider.Get_User_ID(authorizationHeader);
+                var tourist_info = Tourist_ProfileService.Get_by_User_ID(current_user_ID);
                 if (current_user_ID > 0)
                 {
                     var file = HttpContext.Current.Request.Files[0];
@@ -225,7 +235,7 @@ namespace Unreal_Journey_Engine.Controllers
                             file.InputStream.CopyTo(memoryStream);
                             imageData = memoryStream.ToArray();
                         }
-                        var final_decision = Tourist_ProfileService.Upload_Image(imageData, file.FileName, current_user_ID);
+                        var final_decision = Tourist_ProfileService.Upload_Image(imageData, file.FileName, tourist_info.Tourist_ID);
                         if (final_decision)
                         {
                             var responseMessage = new
@@ -267,24 +277,34 @@ namespace Unreal_Journey_Engine.Controllers
         // Feature 2 : Get Profile Image
         #region Get Image
         [HttpGet]
-        [Route("image/")]
+        [Route("image")]
+        [Logged]
         public HttpResponseMessage Get_Tourist_Profile_Image()
         {
             try
             {
-                // Using Session Here
-                //var current_user = (int)System.Web.HttpContext.Current.Session["Tourist_ID"];
-                var current_user = 1;
+
+                //if (!string.IsNullOrEmpty(authorizationHeader))
+                //{
+                //    current_user = AuthService.IsTokenValid(authorizationHeader);
+                //}
+
+                var current_user = 0;
+                var authorizationHeader = Request.Headers.Authorization?.ToString();
+                current_user = User_Info_Provider.Get_User_ID(authorizationHeader);
+
+
                 if (current_user > 0 )
                 {
-
-                    var image = Tourist_ProfileService.Get_Image(current_user);
+                    var current_tourist = Tourist_ProfileService.Get_by_User_ID(current_user);
+                    var image = Tourist_ProfileService.Get_Image(current_tourist.Tourist_ID);
                     
                     if (image != null)
                     {
                         HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK);
+                        var copy_Byte_image = image;
                         response.Content = new ByteArrayContent(image);
-                        response.Content.Headers.ContentType = new MediaTypeHeaderValue("image/png"); // Set the appropriate content type
+                        response.Content.Headers.ContentType = new MediaTypeHeaderValue(GetImageContentType(copy_Byte_image)); // Set the appropriate content type
                         return response;
                     }
                     else
@@ -313,13 +333,40 @@ namespace Unreal_Journey_Engine.Controllers
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, ex.Message);
             }
         }
+
+        #region Get Image Type
+        private string GetImageContentType(byte[] image)
+        {
+            if (image.Length >= 2)
+            {
+                if (image[0] == 0xFF && image[1] == 0xD8) // JPEG magic number
+                {
+                    return "image/jpeg";
+                }
+                else if (image[0] == 0x89 && image[1] == 0x50 && image[2] == 0x4E && image[3] == 0x47) // PNG magic number
+                {
+                    return "image/png";
+                }
+                else if (image[0] == 0x47 && image[1] == 0x49 && image[2] == 0x46 && image[3] == 0x38) // GIF8 magic number
+                {
+                    return "image/gif";
+                }
+                else if (image[0] == 0x3C && image[1] == 0x73 && image[2] == 0x76 && image[3] == 0x67) // SVG magic number (XML declaration)
+                {
+                    return "image/svg+xml";
+                }
+            }
+
+            return "application/octet-stream";
+        }
+        #endregion Get Image Type
+
+
+
+
+
         #endregion Get Image
-
-
         #endregion Feature APIs
-
-
-
         #region Text Color Configuration in CONSOLE
         public static void Print_in_Red(string text)
         {

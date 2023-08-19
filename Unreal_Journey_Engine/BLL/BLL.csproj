@@ -48,13 +48,16 @@
     <Compile Include="DTOs\Admin_ProfileDTO.cs" />
     <Compile Include="DTOs\BookingDTO.cs" />
     <Compile Include="DTOs\FeedbackDTO.cs" />
+    <Compile Include="DTOs\LoginDTO.cs" />
     <Compile Include="DTOs\Promotion_TableDTO.cs" />
+    <Compile Include="DTOs\TokenDTO.cs" />
     <Compile Include="DTOs\Tourist_ProfileDTO.cs" />
     <Compile Include="DTOs\Tour_PackageDTO.cs" />
     <Compile Include="DTOs\Tour_ReviewDTO.cs" />
     <Compile Include="DTOs\UserDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Admin_ProfileService.cs" />
+    <Compile Include="Services\AuthService.cs" />
     <Compile Include="Services\BookingService.cs" />
     <Compile Include="Services\FeedbackService.cs" />
     <Compile Include="Services\MapperService.cs" />

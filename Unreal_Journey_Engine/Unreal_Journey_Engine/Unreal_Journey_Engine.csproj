@@ -149,6 +149,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="AuthFilters\Logged.cs" />
     <Compile Include="Controllers\Admin_ProfileController.cs" />
     <Compile Include="Controllers\BookingController.cs" />
     <Compile Include="Controllers\FeedbackController.cs" />
@@ -157,6 +158,7 @@
     <Compile Include="Controllers\Tour_PackageController.cs" />
     <Compile Include="Controllers\Tour_ReviewController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\User_Info_Provider.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

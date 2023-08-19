@@ -91,7 +91,7 @@ namespace DAL.Repos
                     data.Tourist_ID = obj.Tourist_ID;
                     data.Name = obj.Name;
                     data.Phone = obj.Phone;
-                    //data.Image = obj.Image; Do not update the Image
+                    data.Image = obj.Image; //Do not update the Image
                     data.User_ID = obj.User_ID;
 
                     return db.SaveChanges() > 0;
@@ -177,7 +177,10 @@ namespace DAL.Repos
                 {
                     return File.ReadAllBytes(imagePath);
                 }
-                return null;
+                else
+                {
+                    return null;
+                }
             }
             catch (Exception ex)
             {

@@ -7,6 +7,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Cors;
+using System.Web.UI.WebControls;
 
 namespace Unreal_Journey_Engine.Controllers
 {
@@ -183,6 +184,36 @@ namespace Unreal_Journey_Engine.Controllers
             }
         }
         #endregion Delete
+
+
+
+
+        #region Login
+
+        [HttpPost]
+        [Route("login")]
+        public HttpResponseMessage Login(LoginDTO login)
+        {
+            try
+            {
+                var token = AuthService.Login(login.Email, login.Password);
+                if (token != null)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, token);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.NotFound, new { Msg = "Username or password invalid" });
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
+            }
+        }
+
+        #endregion Login
 
 
 

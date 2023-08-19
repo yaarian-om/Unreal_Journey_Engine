@@ -55,11 +55,14 @@
     <Compile Include="Database\Models\Admin_Profile.cs" />
     <Compile Include="Database\Models\Booking.cs" />
     <Compile Include="Database\Models\Feedback.cs" />
+    <Compile Include="Database\Models\Pin_Code.cs" />
     <Compile Include="Database\Models\Promotion_Table.cs" />
+    <Compile Include="Database\Models\Token.cs" />
     <Compile Include="Database\Models\Tourist_Profile.cs" />
     <Compile Include="Database\Models\Tour_Package.cs" />
     <Compile Include="Database\Models\Tour_Review.cs" />
     <Compile Include="Database\Models\User.cs" />
+    <Compile Include="Interfaces\IAuth.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
     <Compile Include="Interfaces\I_image.cs" />
     <Compile Include="Migrations\202307311344447_Create_User_Table.cs" />
@@ -142,6 +145,14 @@
     <Compile Include="Migrations\202308190647393_First_Update_of_19_Aug_23.designer.cs">
       <DependentUpon>202308190647393_First_Update_of_19_Aug_23.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202308191153073_Created_Token_and_Pin_Code_Tables.cs" />
+    <Compile Include="Migrations\202308191153073_Created_Token_and_Pin_Code_Tables.designer.cs">
+      <DependentUpon>202308191153073_Created_Token_and_Pin_Code_Tables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308191155232_Adding_key_for_Pin_Code_table.cs" />
+    <Compile Include="Migrations\202308191155232_Adding_key_for_Pin_Code_table.designer.cs">
+      <DependentUpon>202308191155232_Adding_key_for_Pin_Code_table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepoAccessFactory.cs" />
@@ -150,6 +161,7 @@
     <Compile Include="Repos\FeedbackRepo.cs" />
     <Compile Include="Repos\Promotion_TableRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
+    <Compile Include="Repos\TokenRepo.cs" />
     <Compile Include="Repos\Tourist_ProfileRepo.cs" />
     <Compile Include="Repos\Tour_PackageRepo.cs" />
     <Compile Include="Repos\Tour_ReviewRepo.cs" />
@@ -220,6 +232,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202308190647393_First_Update_of_19_Aug_23.resx">
       <DependentUpon>202308190647393_First_Update_of_19_Aug_23.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308191153073_Created_Token_and_Pin_Code_Tables.resx">
+      <DependentUpon>202308191153073_Created_Token_and_Pin_Code_Tables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308191155232_Adding_key_for_Pin_Code_table.resx">
+      <DependentUpon>202308191155232_Adding_key_for_Pin_Code_table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class UserRepo : Repo, IRepo<User, int, bool>
+    internal class UserRepo : Repo, IRepo<User, int, bool>, IAuth
     {
 
         #region C R U D Operation
@@ -128,6 +128,30 @@ namespace DAL.Repos
 
         #endregion C R U D Operation
 
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+        #region User Authentication
+        public User Authenticate(string Email, string Password)
+        {
+            var data = from u in db.Users
+                       where u.Email.Equals(Email)
+                       && u.Password.Equals(Password)
+                       select u;
+            return data.SingleOrDefault();
+        }
+        #endregion User Authentication
 
         #region Text Color Configuration in CONSOLE
         public static void Print_in_Red(string text)
