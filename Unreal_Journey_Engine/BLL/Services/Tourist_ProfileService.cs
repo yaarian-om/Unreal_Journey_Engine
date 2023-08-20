@@ -217,6 +217,82 @@ namespace BLL.Services
 
         #endregion Get Tourist By User_ID
 
+        #region Forget Password
+
+        public static bool Send_Pin(string Email)
+        {
+            var user_info = (from t in RepoAccessFactory.User_Repo_Access().Get()
+                             where t.Email.Equals(Email)
+                             select t).SingleOrDefault();
+            if (user_info != null)
+            {
+                // Generate and Send Pin
+                int randomPin = new Random().Next(100000, 1000000);
+                var create_pin = new Pin_Code() {
+                    Pin_Code_ID = 0,
+                    Pin = randomPin,
+                    User_ID = user_info.User_ID
+                };
+
+                // Send Mail Code here
+                var decision = EmailService.SendEmail(user_info.Email, "Password Reset Code", 
+                    $"Dear Tourist,\r\n" +
+                    $"You have requested to reset your password for your account. To proceed with the password reset, please use the verification code provided below:\r\n\r\n" +
+                    $"Verification Code: {randomPin}\r\n\r\n" +
+                    $"Please enter this code on the password reset page to verify your identity. This code will expire after a certain duration for security purposes.\r\n\r\n" +
+                    $"If you did not request a password reset or if you have any concerns regarding your account security, please contact our support team immediately.\r\n\r\nBest regards,\r\n" +
+                    $"Unreal Journey Team");
+                if (decision)
+                {
+                    return RepoAccessFactory.Pin_Code_Repo_Access().Create(create_pin);
+                }
+                else
+                {
+                    return false;
+                }
+                
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public static bool Verify_Pin(string s_pin)
+        {
+            int pin = int.Parse(s_pin);
+            var decision = (from t in RepoAccessFactory.Pin_Code_Repo_Access().Get()
+                            where t.Pin.Equals(pin)
+                            //&& t.User_ID.Equals(pin)
+                            select t).SingleOrDefault();
+            var Update_pin = new Pin_Code()
+            {
+                Pin_Code_ID = -1,
+                Pin = pin,
+                User_ID = -1
+            };
+            return RepoAccessFactory.Pin_Code_Repo_Access().Update(Update_pin);
+        }
+
+        public static bool Update_Password(string Email, string New_Password)
+        {
+            var user_info = (from t in RepoAccessFactory.User_Repo_Access().Get()
+                             where t.Email.Equals(Email)
+                             select t).SingleOrDefault();
+            if(user_info != null)
+            {
+                user_info.Password = New_Password;
+                return RepoAccessFactory.User_Repo_Access().Update(user_info);
+            }
+            else
+            {
+                return false;
+            }
+            
+        }
+
+        #endregion Forget Password
+
         #endregion Feature APIs
 
 
@@ -238,10 +314,6 @@ namespace BLL.Services
             Console.WriteLine(text);
             Console.ResetColor();
         }
-
-
-
-
         #endregion Text Color Configuration in CONSOLE
 
 

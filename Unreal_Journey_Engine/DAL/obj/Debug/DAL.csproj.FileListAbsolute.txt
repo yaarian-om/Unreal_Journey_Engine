@@ -63,3 +63,5 @@ D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.First_Update_of_19_Aug_23.resources
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Created_Token_and_Pin_Code_Tables.resources
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.Adding_key_for_Pin_Code_table.resources
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.making_Pin_Code_table_Pin_attribute_null_allowed.resources
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL.Migrations.First_update_of_20_AUG_23_with_pin_code_table.resources

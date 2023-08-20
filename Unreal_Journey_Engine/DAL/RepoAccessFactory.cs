@@ -65,6 +65,12 @@ namespace DAL
         {
             return new TokenRepo();
         }
+
+        public static IRepo<Pin_Code, int, bool> Pin_Code_Repo_Access()
+        {
+            return new Pin_CodeRepo();
+        }
+
         public static IAuth AuthDataAccess()
         {
             return new UserRepo();

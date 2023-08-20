@@ -153,12 +153,21 @@
     <Compile Include="Migrations\202308191155232_Adding_key_for_Pin_Code_table.designer.cs">
       <DependentUpon>202308191155232_Adding_key_for_Pin_Code_table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202308192032189_making_Pin_Code_table_Pin_attribute_null_allowed.cs" />
+    <Compile Include="Migrations\202308192032189_making_Pin_Code_table_Pin_attribute_null_allowed.designer.cs">
+      <DependentUpon>202308192032189_making_Pin_Code_table_Pin_attribute_null_allowed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308200842197_First_update_of_20_AUG_23_with_pin_code_table.cs" />
+    <Compile Include="Migrations\202308200842197_First_update_of_20_AUG_23_with_pin_code_table.designer.cs">
+      <DependentUpon>202308200842197_First_update_of_20_AUG_23_with_pin_code_table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepoAccessFactory.cs" />
     <Compile Include="Repos\Admin_ProfileRepo.cs" />
     <Compile Include="Repos\BookingRepo.cs" />
     <Compile Include="Repos\FeedbackRepo.cs" />
+    <Compile Include="Repos\Pin_CodeRepo.cs" />
     <Compile Include="Repos\Promotion_TableRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
     <Compile Include="Repos\TokenRepo.cs" />
@@ -238,6 +247,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202308191155232_Adding_key_for_Pin_Code_table.resx">
       <DependentUpon>202308191155232_Adding_key_for_Pin_Code_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308192032189_making_Pin_Code_table_Pin_attribute_null_allowed.resx">
+      <DependentUpon>202308192032189_making_Pin_Code_table_Pin_attribute_null_allowed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308200842197_First_update_of_20_AUG_23_with_pin_code_table.resx">
+      <DependentUpon>202308200842197_First_update_of_20_AUG_23_with_pin_code_table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

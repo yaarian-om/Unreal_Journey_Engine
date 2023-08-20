@@ -48,6 +48,7 @@
     <Compile Include="DTOs\Admin_ProfileDTO.cs" />
     <Compile Include="DTOs\BookingDTO.cs" />
     <Compile Include="DTOs\FeedbackDTO.cs" />
+    <Compile Include="DTOs\Forget_PasswordDTO.cs" />
     <Compile Include="DTOs\LoginDTO.cs" />
     <Compile Include="DTOs\Promotion_TableDTO.cs" />
     <Compile Include="DTOs\TokenDTO.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="Services\Admin_ProfileService.cs" />
     <Compile Include="Services\AuthService.cs" />
     <Compile Include="Services\BookingService.cs" />
+    <Compile Include="Services\EmailService.cs" />
     <Compile Include="Services\FeedbackService.cs" />
     <Compile Include="Services\MapperService.cs" />
     <Compile Include="Services\Promotion_TableService.cs" />

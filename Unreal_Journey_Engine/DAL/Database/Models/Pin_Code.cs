@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace DAL.Database.Models
 {
-    internal class Pin_Code
+    public class Pin_Code
     {
         [Key]
         public int Pin_Code_ID { get; set; }
 
-        public int Pin { get; set; }
+        public int? Pin { get; set; }
 
 
         [ForeignKey("User")]
