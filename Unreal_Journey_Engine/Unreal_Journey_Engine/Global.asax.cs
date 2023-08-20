@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Http;
 using System.Web.Routing;
+using System.Web.SessionState;
 
 namespace Unreal_Journey_Engine
 {
@@ -12,6 +13,8 @@ namespace Unreal_Journey_Engine
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
+            // Server side session Configuration
+            HttpContext.Current.SetSessionStateBehavior(SessionStateBehavior.Required);
         }
     }
 }

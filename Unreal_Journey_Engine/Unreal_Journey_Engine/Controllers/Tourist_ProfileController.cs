@@ -366,6 +366,134 @@ namespace Unreal_Journey_Engine.Controllers
 
 
         #endregion Get Image
+
+        // Feature 3 : Forget Password
+        #region Forget Password
+
+        [HttpPut]
+        [Route("forget_password")]
+        public HttpResponseMessage Get_Pin(Forget_PasswordDTO obj)
+        {
+            if(obj.Email !=  null)
+            {
+                var decision = Tourist_ProfileService.Send_Pin(obj.Email);
+                if (decision)
+                {
+                    //HttpContext.Current.Session["Email"] = obj.Email;
+                    // Email has to be sent from the Frontend through Frontend Session
+                    var responseMessage = new
+                    {
+                        Message = "Pin has been sent to " + obj.Email
+                    };
+                    return Request.CreateResponse(HttpStatusCode.OK, responseMessage);
+                }
+                else
+                {
+                    var responseMessage = new
+                    {
+                        Message = "Could Not Sent the Varification Pin to " + obj.Email
+                    };
+                    return Request.CreateResponse(HttpStatusCode.InternalServerError, responseMessage);
+                }
+            }
+            else
+            {
+                var responseMessage = new
+                {
+                    Message = "Please enter your login email"
+                };
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, responseMessage);
+            }
+        }
+
+        [HttpPut]
+        [Route("verify_pin")]
+        public HttpResponseMessage Verify_Pin(Forget_PasswordDTO obj)
+        {
+            if (obj.Pin != null)
+            {
+                var decision = Tourist_ProfileService.Verify_Pin(obj.Pin);
+                if (decision)
+                {
+                    var responseMessage = new
+                    {
+                        Message = "Pin Verfication Successful. Right Pin Given"
+                    };
+                    return Request.CreateResponse(HttpStatusCode.OK, responseMessage);
+                }
+                else
+                {
+                    var responseMessage = new
+                    {
+                        Message = "Failed to verify the pin. Pin is incorrect"
+                    };
+                    return Request.CreateResponse(HttpStatusCode.InternalServerError, responseMessage);
+                }
+            }
+            else
+            {
+                var responseMessage = new
+                {
+                    Message = "Please provide pin first"
+                };
+                return Request.CreateResponse(HttpStatusCode.BadRequest, responseMessage);
+            }
+        }
+
+        [HttpPut]
+        [Route("update_password")]
+        public HttpResponseMessage Update_Password(Forget_PasswordDTO obj)
+        {
+            if(!string.IsNullOrEmpty(obj.Password))
+            {
+                var Email = obj.Email;
+                if (Email != null)
+                {
+                    var decision = Tourist_ProfileService.Update_Password(Email, obj.Password);
+                    if (decision)
+                    {
+                        var responseMessage = new
+                        {
+                            Message = "Password Updated Successfully"
+                        };
+                        return Request.CreateResponse(HttpStatusCode.OK, responseMessage);
+                    }
+                    else
+                    {
+                        var responseMessage = new
+                        {
+                            Message = "Failed to update password"
+                        };
+                        return Request.CreateResponse(HttpStatusCode.InternalServerError, responseMessage);
+                    }
+                }
+                else
+                {
+                    var responseMessage = new
+                    {
+                        Message = "Could not retrive your given mail for the forget password"
+                    };
+                    return Request.CreateResponse(HttpStatusCode.InternalServerError, responseMessage);
+                }
+            }
+            else
+            {
+                var responseMessage = new
+                {
+                    Message = "Please provide your new password"
+                };
+                return Request.CreateResponse(HttpStatusCode.BadRequest, responseMessage);
+            }
+        }
+
+        #endregion Forget Password
+
+
+
+
+
+
+
         #endregion Feature APIs
         #region Text Color Configuration in CONSOLE
         public static void Print_in_Red(string text)

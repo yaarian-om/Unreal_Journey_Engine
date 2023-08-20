@@ -8,19 +8,24 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class UserRepo : Repo, IRepo<User, int, bool>, IAuth
+    internal class Pin_CodeRepo : Repo, IRepo<Pin_Code, int, bool>
     {
-
-        #region C R U D Operation
-
         #region Create
-        public bool Create(User obj)
+        public bool Create(Pin_Code obj)
         {
             try
             {
                 if (obj != null)
                 {
-                    db.Users.Add(obj);
+                    var old_data = db.Pin_Codes.FirstOrDefault(u => u.User_ID == obj.User_ID);
+                    if(old_data != null)
+                    {
+                        old_data.Pin = obj.Pin;
+                    }
+                    else
+                    {
+                        db.Pin_Codes.Add(obj);
+                    }
                     return db.SaveChanges() > 0;
                 }
                 else
@@ -41,10 +46,10 @@ namespace DAL.Repos
         {
             try
             {
-                var data = db.Users.Find(id);
+                var data = db.Pin_Codes.Find(id);
                 if (data != null)
                 {
-                    db.Users.Remove(data);
+                    db.Pin_Codes.Remove(data);
                     return db.SaveChanges() > 0;
                 }
                 else
@@ -60,12 +65,12 @@ namespace DAL.Repos
         }
         #endregion Delete
 
-        #region Get All Users
-        public List<User> Get()
+        #region Get All Pin_Codes
+        public List<Pin_Code> Get()
         {
             try
             {
-                var data = db.Users.ToList();
+                var data = db.Pin_Codes.ToList();
                 return (data.Count > 0) ? data : null;
             }
             catch (Exception ex)
@@ -74,14 +79,14 @@ namespace DAL.Repos
                 return null;
             }
         }
-        #endregion Get All Users
+        #endregion Get All Pin_Codes
 
-        #region Get Single User
-        public User Get(int id)
+        #region Get Single Pin_Code
+        public Pin_Code Get(int id)
         {
             try
             {
-                var data = db.Users.Find(id);
+                var data = db.Pin_Codes.Find(id);
                 return (data != null) ? data : null;
             }
             catch (Exception ex)
@@ -90,26 +95,18 @@ namespace DAL.Repos
                 return null;
             }
         }
-        #endregion Get Single User
+        #endregion Get Single Pin_Code
 
         #region Update
-        public bool Update(User obj)
+        public bool Update(Pin_Code old_pin_info)
         {
             try
             {
-                var data = db.Users.Find(obj.User_ID);
+                var data = db.Pin_Codes.FirstOrDefault(u => u.Pin == old_pin_info.Pin);
                 if (data != null)
                 {
-                   
-
-                    data.User_ID = obj.User_ID;
-                    data.Email = obj.Email;
-                    data.Password = obj.Password;
-                    data.Role = obj.Role;
-                    
-
+                    data.Pin = null;
                     return db.SaveChanges() > 0;
-
                 }
                 else
                 {
@@ -126,46 +123,9 @@ namespace DAL.Repos
         }
         #endregion Update
 
-        #endregion C R U D Operation
 
 
 
-
-
-
-
-
-
-
-
-
-        #region Get User by Email
-        //public User Get(string Email)
-        //{
-        //    try
-        //    {
-        //        var data = db.Users.FirstOrDefault(u => u.Email == Email);
-        //        return (data != null) ? data : null;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Print_in_Red("Error = " + ex.Message);
-        //        return null;
-        //    }
-        //}
-        #endregion Get User by Email
-
-
-        #region User Authentication
-        public User Authenticate(string Email, string Password)
-        {
-            var data = from u in db.Users
-                       where u.Email.Equals(Email)
-                       && u.Password.Equals(Password)
-                       select u;
-            return data.SingleOrDefault();
-        }
-        #endregion User Authentication
 
         #region Text Color Configuration in CONSOLE
         public static void Print_in_Red(string text)
@@ -181,8 +141,7 @@ namespace DAL.Repos
             Console.WriteLine(text);
             Console.ResetColor();
         }
+
         #endregion Text Color Configuration in CONSOLE
-
-
     }
 }
