@@ -26,3 +26,97 @@ D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\DAL.dll.co
 D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\AutoMapper.xml
 D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\EntityFramework.xml
 D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\BLL.dll.config
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\DinkToPdf.dll
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Reflection.TypeExtensions.dll
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\DinkToPdf.pdb
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\DinkToPdf.xml
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\DinkToPdfAllOs.dll
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.AspNetCore.WebUtilities.dll
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.Extensions.Logging.dll
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.Extensions.Options.dll
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.Extensions.Primitives.dll
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.Net.Http.Headers.dll
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Newtonsoft.Json.dll
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Buffers.dll
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Memory.dll
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Numerics.Vectors.dll
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Text.Encodings.Web.dll
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.AspNetCore.WebUtilities.xml
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.Extensions.Logging.xml
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.Extensions.Options.xml
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.Extensions.Primitives.xml
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.Net.Http.Headers.xml
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Newtonsoft.Json.xml
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Buffers.xml
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Memory.xml
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Numerics.Vectors.xml
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Text.Encodings.Web.xml
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Select.Pdf.dll
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Select.Pdf.xml
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Select.Html.dep
+D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Select.Tools.dep
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\BLL.dll.config
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\BLL.dll
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\BLL.pdb
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\AutoMapper.dll
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\DAL.dll
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.Net.Http.Headers.dll
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Select.Pdf.dll
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Buffers.dll
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Memory.dll
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Reflection.TypeExtensions.dll
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\EntityFramework.dll
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\DAL.pdb
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\DAL.dll.config
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\AutoMapper.xml
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.AspNetCore.WebUtilities.xml
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.Net.Http.Headers.xml
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Select.Pdf.xml
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Buffers.xml
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Memory.xml
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\EntityFramework.xml
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Select.Html.dep
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Select.Tools.dep
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\obj\Debug\BLL.dll
+C:\Users\ASUS\Desktop\New folder (2)\New folder\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\obj\Debug\BLL.pdb
