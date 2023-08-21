@@ -68,8 +68,6 @@ D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\obj\Debug\DAL
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\bin\Debug\System.Diagnostics.DiagnosticSource.dll
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\bin\Debug\System.Reflection.TypeExtensions.dll
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\bin\Debug\System.Diagnostics.DiagnosticSource.xml
-D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\bin\Debug\DinkToPdf.dll
-D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\bin\Debug\DinkToPdfAllOs.dll
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\bin\Debug\Microsoft.AspNetCore.WebUtilities.dll
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
@@ -85,8 +83,6 @@ D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\bin\Debug\Sys
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\bin\Debug\System.Text.Encodings.Web.dll
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\bin\Debug\System.Threading.Tasks.Extensions.dll
-D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\bin\Debug\DinkToPdf.pdb
-D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\bin\Debug\DinkToPdf.xml
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\bin\Debug\Microsoft.AspNetCore.WebUtilities.xml
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\DAL\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml

@@ -190,14 +190,10 @@ D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\Unreal_Journey_En
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\Unreal_Journey_Engine\bin\System.Runtime.CompilerServices.Unsafe.xml
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\Unreal_Journey_Engine\bin\System.Text.Encodings.Web.xml
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\Unreal_Journey_Engine\bin\System.Web.Http.Cors.xml
-D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\Unreal_Journey_Engine\bin\DinkToPdf.dll
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\Unreal_Journey_Engine\bin\System.Diagnostics.DiagnosticSource.dll
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\Unreal_Journey_Engine\bin\System.Reflection.TypeExtensions.dll
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\Unreal_Journey_Engine\bin\BLL.dll.config
-D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\Unreal_Journey_Engine\bin\DinkToPdf.pdb
-D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\Unreal_Journey_Engine\bin\DinkToPdf.xml
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\Unreal_Journey_Engine\bin\System.Diagnostics.DiagnosticSource.xml
-D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\Unreal_Journey_Engine\bin\DinkToPdfAllOs.dll
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\Unreal_Journey_Engine\bin\Microsoft.AspNetCore.WebUtilities.dll
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\Unreal_Journey_Engine\bin\Microsoft.Bcl.AsyncInterfaces.dll
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\Unreal_Journey_Engine\bin\Microsoft.Extensions.Logging.dll
