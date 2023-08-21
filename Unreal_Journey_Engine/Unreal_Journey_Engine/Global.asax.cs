@@ -13,8 +13,6 @@ namespace Unreal_Journey_Engine
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
-            // Server side session Configuration
-            HttpContext.Current.SetSessionStateBehavior(SessionStateBehavior.Required);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using BLL.DTOs;
 using BLL.Services;
+using Newtonsoft.Json.Linq;
 using System;
 using System.CodeDom;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Security.Principal;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
 using System.Web.Http.Controllers;
@@ -488,7 +490,34 @@ namespace Unreal_Journey_Engine.Controllers
 
         #endregion Forget Password
 
+        // Feature 4 : Get Weather of given Location
+        #region Weather Data
+        [HttpGet]
+        [Route("weather/{location}")]
+        // Here Task is used for Asyncronous Ability / Programming
+        public async Task<IHttpActionResult> Get_weather_Data(string location)
+        {
+            if(!string.IsNullOrEmpty(location))
+            {
+                string weatherData = await WeatherService.GetWeatherAsync(location);
 
+                if (weatherData != null)
+                {
+                    var jsonObject = JObject.Parse(weatherData);
+
+                    return Json(jsonObject); // This will return JSON data
+                }
+                else
+                {
+                    return NotFound();
+                }
+            }
+            else
+            {
+                return BadRequest("Please provide your Location");
+            }
+        }
+        #endregion Weather Data
 
 
 
