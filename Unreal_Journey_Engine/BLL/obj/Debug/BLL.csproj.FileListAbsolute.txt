@@ -27,13 +27,9 @@ D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\AutoMapper
 D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\EntityFramework.xml
 D:\MMyycode\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\obj\Debug\BLL.csproj.CopyComplete
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\BLL.dll.config
-D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\DinkToPdf.dll
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Diagnostics.DiagnosticSource.dll
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Reflection.TypeExtensions.dll
-D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\DinkToPdf.pdb
-D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\DinkToPdf.xml
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\System.Diagnostics.DiagnosticSource.xml
-D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\DinkToPdfAllOs.dll
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.AspNetCore.WebUtilities.dll
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 D:\ASP  .NET Codes\Unreal_Journey_Engine\Unreal_Journey_Engine\BLL\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
