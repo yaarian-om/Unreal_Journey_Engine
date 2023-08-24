@@ -7,6 +7,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Cors;
+using Unreal_Journey_Engine.AuthFilters;
 
 namespace Unreal_Journey_Engine.Controllers
 {
@@ -17,6 +18,7 @@ namespace Unreal_Journey_Engine.Controllers
         #region Get All Promotion
         [HttpGet]
         [Route("all")]
+        [Logged]
         public HttpResponseMessage Get_All_Promotion()
         {
 
@@ -40,6 +42,7 @@ namespace Unreal_Journey_Engine.Controllers
         #region Get Single Promotion
         [HttpGet]
         [Route("{id}")]
+        [Logged]
         public HttpResponseMessage Get(int id)
         {
             try
@@ -68,6 +71,7 @@ namespace Unreal_Journey_Engine.Controllers
         #region Signup / Create
         [HttpPost]
         [Route("create")]
+        [Logged]
         public HttpResponseMessage Create_Promotion(Promotion_TableDTO dto)
         {
             try
@@ -113,6 +117,7 @@ namespace Unreal_Journey_Engine.Controllers
         #region Update
         [HttpPut]
         [Route("update")]
+        [Logged]
         public HttpResponseMessage Update_Promotion(Promotion_TableDTO dto)
         {
             try
@@ -158,6 +163,7 @@ namespace Unreal_Journey_Engine.Controllers
         #region Delete
         [HttpDelete]
         [Route("delete/{id}")]
+        [Logged]
         public HttpResponseMessage Delete_Promotion(int id)
         {
             try

@@ -8,6 +8,7 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Cors;
 using System.Web.UI.WebControls;
+using Unreal_Journey_Engine.AuthFilters;
 
 namespace Unreal_Journey_Engine.Controllers
 {
@@ -19,6 +20,7 @@ namespace Unreal_Journey_Engine.Controllers
         #region Get All Users
         [HttpGet]
         [Route("all")]
+        [Logged]
         public HttpResponseMessage Get_All_Users()
         {
 
@@ -42,6 +44,7 @@ namespace Unreal_Journey_Engine.Controllers
         #region Get Single User
         [HttpGet]
         [Route("{id}")]
+        [Logged]
         public HttpResponseMessage Get(int id)
         {
             try
@@ -115,6 +118,7 @@ namespace Unreal_Journey_Engine.Controllers
         #region Update
         [HttpPut]
         [Route("update")]
+        [Logged]
         public HttpResponseMessage Update_User_Info(UserDTO dto)
         {
             try
@@ -160,6 +164,7 @@ namespace Unreal_Journey_Engine.Controllers
         #region Delete
         [HttpDelete]
         [Route("delete/{id}")]
+        [Logged]
         public HttpResponseMessage Delete_User_Info(int id)
         {
             try
@@ -214,6 +219,82 @@ namespace Unreal_Journey_Engine.Controllers
         }
 
         #endregion Login
+
+        #region Logout
+
+        [HttpGet]
+        [Route("logout")]
+        [Logged]
+        public HttpResponseMessage Logout(LoginDTO login)
+        {
+            try
+            {
+                var current_user = 0;
+                var authorizationHeader = Request.Headers.Authorization?.ToString();
+                current_user = User_Info_Provider.Get_User_ID(authorizationHeader);
+
+                var token = AuthService.Logout(authorizationHeader);
+                if (token != null)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, token);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = "Logout Failed" });
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
+            }
+        }
+
+        #endregion Logout
+
+        #region View Own Profile
+
+        [HttpPost]
+        [Route("profile")]
+        [Logged]
+        public HttpResponseMessage ViewProfile()
+        {
+            try
+            {
+                var authorizationHeader = Request.Headers.Authorization?.ToString();
+                var current_user_ID = User_Info_Provider.Get_User_ID(authorizationHeader);
+                var current_user_Type = User_Info_Provider.Get_User_Role(authorizationHeader);
+
+                if (current_user_Type == "Tourist")
+                {
+                    var tourist_info = Tourist_ProfileService.Get(current_user_ID);
+                    return Request.CreateResponse(HttpStatusCode.OK, tourist_info);
+                }
+                else if(current_user_Type == "Admin")
+                {
+                    var admin_info = Admin_ProfileService.Get(current_user_ID);
+                    return Request.CreateResponse(HttpStatusCode.OK, admin_info);
+                }
+                else if (current_user_Type == "Tour_Guide")
+                {
+                    var tour_guide_info = Admin_ProfileService.Get(current_user_ID);
+                    return Request.CreateResponse(HttpStatusCode.OK, tour_guide_info);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.NotFound, new { Message = "Profile Not Found !" });
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex);
+            }
+        }
+
+        #endregion View Own Profile
+
+
 
 
 
