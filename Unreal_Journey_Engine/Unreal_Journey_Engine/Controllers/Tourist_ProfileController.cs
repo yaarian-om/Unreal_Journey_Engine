@@ -579,7 +579,7 @@ namespace Unreal_Journey_Engine.Controllers
         }
         #endregion Weather Data
 
-        // Feature 5 : Get all Bookings by Logged in Tourist ID
+        // Feature 6 : Get all Bookings by Logged in Tourist ID
         #region Get All Bookings by Logged in Tourist ID
         [HttpGet]
         [Route("bookings/all")]
@@ -618,7 +618,7 @@ namespace Unreal_Journey_Engine.Controllers
 
         #endregion Get All Bookings by Logged in Tourist ID
 
-        // Feature 5 : Get all Reviews by Logged in Tourist ID
+        // Feature 7 : Get all Reviews by Logged in Tourist ID
         #region Get All Reviews by Logged in Tourist ID
         [HttpGet]
         [Route("reviews/all")]

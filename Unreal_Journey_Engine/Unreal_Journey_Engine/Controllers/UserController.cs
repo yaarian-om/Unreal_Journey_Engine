@@ -234,7 +234,7 @@ namespace Unreal_Journey_Engine.Controllers
                 current_user = User_Info_Provider.Get_User_ID(authorizationHeader);
 
                 var token = AuthService.Logout(authorizationHeader);
-                if (token != null)
+                if (token)
                 {
                     return Request.CreateResponse(HttpStatusCode.OK, token);
                 }
@@ -251,6 +251,8 @@ namespace Unreal_Journey_Engine.Controllers
         }
 
         #endregion Logout
+
+        // Feature 5 : View my Profile
 
         #region View Own Profile
 
