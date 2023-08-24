@@ -1,0 +1,1 @@
+I have used Angular-js to handle the login and fetching the data from backend

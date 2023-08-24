@@ -579,7 +579,7 @@ namespace Unreal_Journey_Engine.Controllers
         }
         #endregion Weather Data
 
-        // Feature 5 : Get all Bookings by Logged in Tourist ID
+        // Feature 6 : Get all Bookings by Logged in Tourist ID
         #region Get All Bookings by Logged in Tourist ID
         [HttpGet]
         [Route("bookings/all")]
@@ -592,7 +592,7 @@ namespace Unreal_Journey_Engine.Controllers
             {
                 var current_tourist_ID = User_Info_Provider.Get_Tourist_ID(authorizationHeader);
                 var data = Tourist_ProfileService.Get_All_Booking_by_Tourist_ID(current_tourist_ID);
-                if (data.Count > 0)
+                if (data != null && data.Count > 0)
                 {
                     return Request.CreateResponse(HttpStatusCode.OK, data);
                 }
@@ -618,7 +618,7 @@ namespace Unreal_Journey_Engine.Controllers
 
         #endregion Get All Bookings by Logged in Tourist ID
 
-        // Feature 5 : Get all Reviews by Logged in Tourist ID
+        // Feature 7 : Get all Reviews by Logged in Tourist ID
         #region Get All Reviews by Logged in Tourist ID
         [HttpGet]
         [Route("reviews/all")]
@@ -631,7 +631,7 @@ namespace Unreal_Journey_Engine.Controllers
             {
                 var current_tourist_ID = User_Info_Provider.Get_Tourist_ID(authorizationHeader);
                 var data = Tourist_ProfileService.Get_All_Reviews_by_Tourist_ID(current_tourist_ID);
-                if (data.Count > 0)
+                if (data != null && data.Count > 0)
                 {
                     return Request.CreateResponse(HttpStatusCode.OK, data);
                 }
