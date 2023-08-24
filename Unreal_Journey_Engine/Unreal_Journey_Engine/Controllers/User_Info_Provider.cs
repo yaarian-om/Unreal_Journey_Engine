@@ -43,5 +43,42 @@ namespace Unreal_Journey_Engine.Controllers
             }
             return current_user_type;
         }
+
+        public static int Get_Tourist_ID(string authorizationHeader)
+        {
+            int current_tourist_ID= 0;
+            if (!string.IsNullOrEmpty(authorizationHeader))
+            {
+                int user_ID = AuthService.IsTokenValid(authorizationHeader);
+                var current_user = Tourist_ProfileService.Get(user_ID);
+                current_tourist_ID = current_user.Tourist_ID;
+            }
+            return current_tourist_ID;
+        }
+
+        public static int Get_Admin_ID(string authorizationHeader)
+        {
+            int current_admin_ID = 0;
+            if (!string.IsNullOrEmpty(authorizationHeader))
+            {
+                int user_ID = AuthService.IsTokenValid(authorizationHeader);
+                var current_user = Admin_ProfileService.Get(user_ID);
+                current_admin_ID = current_user.Admin_ID;
+            }
+            return current_admin_ID;
+        }
+
+        public static int Get_tour_guide_ID(string authorizationHeader)
+        {
+            throw new NotImplementedException();
+            int current_admin_ID = 0;
+            if (!string.IsNullOrEmpty(authorizationHeader))
+            {
+                int user_ID = AuthService.IsTokenValid(authorizationHeader);
+                //var current_user = TourG.Get(user_ID);
+                //current_admin_ID = current_user.Admin_ID;
+            }
+            return current_admin_ID;
+        }
     }
 }

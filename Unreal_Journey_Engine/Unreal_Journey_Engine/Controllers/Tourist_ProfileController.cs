@@ -428,7 +428,7 @@ namespace Unreal_Journey_Engine.Controllers
 
         #endregion Get Image
 
-        // Feature 3 : Forget Password
+        // Feature 3 : Forget Password OTP varification
         #region Forget Password
 
         [HttpPut]
@@ -579,11 +579,97 @@ namespace Unreal_Journey_Engine.Controllers
         }
         #endregion Weather Data
 
+        // Feature 5 : Get all Bookings by Logged in Tourist ID
+        #region Get All Bookings by Logged in Tourist ID
+        [HttpGet]
+        [Route("bookings/all")]
+        [Logged]
+        public HttpResponseMessage Get_All_Booking_by_Tourist_ID()
+        {
+            var authorizationHeader = Request.Headers.Authorization?.ToString();
+            var user_type = User_Info_Provider.Get_User_Role(authorizationHeader);
+            if (user_type == "Tourist")
+            {
+                var current_tourist_ID = User_Info_Provider.Get_Tourist_ID(authorizationHeader);
+                var data = Tourist_ProfileService.Get_All_Booking_by_Tourist_ID(current_tourist_ID);
+                if (data.Count > 0)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, data);
+                }
+                else
+                {
+                    var responseMessage = new
+                    {
+                        Message = "No data available"
+                    };
+                    return Request.CreateResponse(HttpStatusCode.NotFound, responseMessage);
+                }
+            }
+            else
+            {
+                var responseMessage = new
+                {
+                    Message = "You are not allowed. Only tourist can"
+                };
+                return Request.CreateResponse(HttpStatusCode.Forbidden, responseMessage);
+            }
+        }
+
+
+        #endregion Get All Bookings by Logged in Tourist ID
+
+        // Feature 5 : Get all Reviews by Logged in Tourist ID
+        #region Get All Reviews by Logged in Tourist ID
+        [HttpGet]
+        [Route("reviews/all")]
+        [Logged]
+        public HttpResponseMessage Get_All_Reviews_by_Tourist_ID()
+        {
+            var authorizationHeader = Request.Headers.Authorization?.ToString();
+            var user_type = User_Info_Provider.Get_User_Role(authorizationHeader);
+            if (user_type == "Tourist")
+            {
+                var current_tourist_ID = User_Info_Provider.Get_Tourist_ID(authorizationHeader);
+                var data = Tourist_ProfileService.Get_All_Reviews_by_Tourist_ID(current_tourist_ID);
+                if (data.Count > 0)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, data);
+                }
+                else
+                {
+                    var responseMessage = new
+                    {
+                        Message = "No data available"
+                    };
+                    return Request.CreateResponse(HttpStatusCode.NotFound, responseMessage);
+                }
+            }
+            else
+            {
+                var responseMessage = new
+                {
+                    Message = "You are not allowed. Only tourist can"
+                };
+                return Request.CreateResponse(HttpStatusCode.Forbidden, responseMessage);
+            }
+        }
+
+
+        #endregion Get All Reviews by Logged in Tourist ID
+
+
+
 
 
 
 
         #endregion Feature APIs
+
+
+
+
+
+
         #region Text Color Configuration in CONSOLE
         public static void Print_in_Red(string text)
         {
