@@ -30,21 +30,35 @@ namespace Unreal_Journey_Engine.Controllers
         #region Get All Tourist
         [HttpGet]
         [Route("all")]
+        [Logged]
         public HttpResponseMessage Get_All_Tourist()
         {
-
-            var data = Tourist_ProfileService.Get();
-            if (data.Count > 0)
+            var current_user_Type = "";
+            var authorizationHeader = Request.Headers.Authorization?.ToString();
+            current_user_Type = User_Info_Provider.Get_User_Role(authorizationHeader);
+            if(current_user_Type == "Admin")
             {
-                return Request.CreateResponse(HttpStatusCode.OK, data);
+                var data = Tourist_ProfileService.Get();
+                if (data.Count > 0)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, data);
+                }
+                else
+                {
+                    var responseMessage = new
+                    {
+                        Message = "No data available"
+                    };
+                    return Request.CreateResponse(HttpStatusCode.NotFound, responseMessage);
+                }
             }
             else
             {
                 var responseMessage = new
                 {
-                    Message = "No data available"
+                    Message = "You are not allowed to get all info of Tourists"
                 };
-                return Request.CreateResponse(HttpStatusCode.NotFound, responseMessage);
+                return Request.CreateResponse(HttpStatusCode.Forbidden, responseMessage);
             }
 
         }
@@ -53,6 +67,7 @@ namespace Unreal_Journey_Engine.Controllers
         #region Get Single Tourist
         [HttpGet]
         [Route("{id}")]
+        [Logged]
         public HttpResponseMessage Get(int id)
         {
             try
@@ -81,40 +96,54 @@ namespace Unreal_Journey_Engine.Controllers
         #region Signup / Create
         [HttpPost]
         [Route("create")]
+        [Logged]
         public HttpResponseMessage Create_Tourist_Profile(Tourist_ProfileDTO dto)
         {
             try
             {
-                
-                if (dto != null)
+                var authorizationHeader = Request.Headers.Authorization?.ToString();
+                var current_user_Type = User_Info_Provider.Get_User_Role(authorizationHeader);
+                if (current_user_Type == "Tourist" || current_user_Type == "Admin")
                 {
-                    var decision = Tourist_ProfileService.Create(dto);
-                    if (decision)
+                    if (dto != null)
                     {
-                        var responseMessage = new
+                        var decision = Tourist_ProfileService.Create(dto);
+                        if (decision)
                         {
-                            Message = "Account Created"
-                        };
-                        return Request.CreateResponse(HttpStatusCode.OK, responseMessage);
+                            var responseMessage = new
+                            {
+                                Message = "Account Created"
+                            };
+                            return Request.CreateResponse(HttpStatusCode.OK, responseMessage);
+                        }
+                        else
+                        {
+                            var responseMessage = new
+                            {
+                                Message = "Failed to Create Account"
+                            };
+                            return Request.CreateResponse(HttpStatusCode.NotAcceptable, responseMessage);
+                        }
+
                     }
                     else
                     {
                         var responseMessage = new
                         {
-                            Message = "Failed to Create Account"
+                            Message = "Provide Tourist Data to Create Account"
                         };
-                        return Request.CreateResponse(HttpStatusCode.NotAcceptable, responseMessage);
+                        return Request.CreateResponse(HttpStatusCode.PreconditionFailed, responseMessage);
                     }
-                    
                 }
                 else
                 {
                     var responseMessage = new
                     {
-                        Message = "Provide Tourist Data to Create Account"
+                        Message = "You are not allowed to create tourist account. Only Tourist and admin can"
                     };
-                    return Request.CreateResponse(HttpStatusCode.PreconditionFailed, responseMessage);
+                    return Request.CreateResponse(HttpStatusCode.Forbidden, responseMessage);
                 }
+                
             }
             catch (Exception ex)
             {
@@ -126,40 +155,54 @@ namespace Unreal_Journey_Engine.Controllers
         #region Update
         [HttpPut]
         [Route("update")]
+        [Logged]
         public HttpResponseMessage Update_Tourist_Profile(Tourist_ProfileDTO dto)
         {
             try
             {
-
-                if (dto != null)
+                var authorizationHeader = Request.Headers.Authorization?.ToString();
+                var current_user_Type = User_Info_Provider.Get_User_Role(authorizationHeader);
+                if (current_user_Type == "Admin" || current_user_Type == "Tourist")
                 {
-                    var decision = Tourist_ProfileService.Update(dto);
-                    if (decision)
+                    if (dto != null)
                     {
-                        var responseMessage = new
+                        var decision = Tourist_ProfileService.Update(dto);
+                        if (decision)
                         {
-                            Message = "Account Updated"
-                        };
-                        return Request.CreateResponse(HttpStatusCode.OK, responseMessage);
+                            var responseMessage = new
+                            {
+                                Message = "Account Updated"
+                            };
+                            return Request.CreateResponse(HttpStatusCode.OK, responseMessage);
+                        }
+                        else
+                        {
+                            var responseMessage = new
+                            {
+                                Message = "Failed to Update Account"
+                            };
+                            return Request.CreateResponse(HttpStatusCode.NotAcceptable, responseMessage);
+                        }
+
                     }
                     else
                     {
                         var responseMessage = new
                         {
-                            Message = "Failed to Update Account"
+                            Message = "Provide Tourist Data to Create Account"
                         };
-                        return Request.CreateResponse(HttpStatusCode.NotAcceptable, responseMessage);
+                        return Request.CreateResponse(HttpStatusCode.PreconditionFailed, responseMessage);
                     }
-
                 }
                 else
                 {
                     var responseMessage = new
                     {
-                        Message = "Provide Tourist Data to Create Account"
+                        Message = "You are not allowed to update tourist profile. Only Tourist and admin can"
                     };
-                    return Request.CreateResponse(HttpStatusCode.PreconditionFailed, responseMessage);
+                    return Request.CreateResponse(HttpStatusCode.Forbidden, responseMessage);
                 }
+                
             }
             catch (Exception ex)
             {
@@ -171,23 +214,39 @@ namespace Unreal_Journey_Engine.Controllers
         #region Delete
         [HttpDelete]
         [Route("delete/{id}")]
+        [Logged]
         public HttpResponseMessage Delete_Tourist_Profile(int id)
         {
             try
             {
-                var data = Tourist_ProfileService.Delete(id);
-                if (data)
+                var authorizationHeader = Request.Headers.Authorization?.ToString();
+                var current_user_Type = User_Info_Provider.Get_User_Role(authorizationHeader);
+                if (current_user_Type == "Admin" || current_user_Type == "Tourist")
                 {
-                    return Request.CreateResponse(HttpStatusCode.OK, data);
+                    var data = Tourist_ProfileService.Delete(id);
+                    if (data)
+                    {
+                        return Request.CreateResponse(HttpStatusCode.OK, data);
+                    }
+                    else
+                    {
+                        var responseMessage = new
+                        {
+                            Message = "Account Not Found"
+                        };
+                        return Request.CreateResponse(HttpStatusCode.NotFound, responseMessage);
+                    }
                 }
                 else
                 {
                     var responseMessage = new
                     {
-                        Message = "Account Not Found"
+                        Message = "You are not allowed to delete tourist profile. Only Tourist and admin can"
                     };
-                    return Request.CreateResponse(HttpStatusCode.NotFound, responseMessage);
+                    return Request.CreateResponse(HttpStatusCode.Forbidden, responseMessage);
                 }
+
+                
             }
             catch (Exception ex)
             {
@@ -494,6 +553,7 @@ namespace Unreal_Journey_Engine.Controllers
         #region Weather Data
         [HttpGet]
         [Route("weather/{location}")]
+        [Logged]
         // Here Task is used for Asyncronous Ability / Programming
         public async Task<IHttpActionResult> Get_weather_Data(string location)
         {

@@ -31,5 +31,17 @@ namespace Unreal_Journey_Engine.Controllers
             }
             return current_user;
         }
+
+        public static string Get_User_Role(string authorizationHeader)
+        {
+            string current_user_type = null;
+            if (!string.IsNullOrEmpty(authorizationHeader))
+            {
+                int user_ID = AuthService.IsTokenValid(authorizationHeader);
+                var current_user = UserService.Get(user_ID);
+                current_user_type = current_user.Role;
+            }
+            return current_user_type;
+        }
     }
 }
