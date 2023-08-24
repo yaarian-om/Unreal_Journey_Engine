@@ -303,6 +303,46 @@ namespace BLL.Services
 
         #endregion Forget Password
 
+        #region Get Bookings by ID
+        public static List<BookingDTO> Get_All_Booking_by_Tourist_ID(int tourist_ID)
+        {
+            var data = BookingService.Get().
+                Where(booking => booking.Tourist_ID == tourist_ID)
+                .ToList();
+
+            if (data.Count > 0)
+            {
+                var mapper = MapperService<Booking, BookingDTO>.GetMapper();
+                var bookingDTO = mapper.Map<List<BookingDTO>>(data);
+                return bookingDTO;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        #endregion Get Bookings by ID
+
+        #region Get Bookings by ID
+        public static List<Tour_ReviewDTO> Get_All_Reviews_by_Tourist_ID(int tourist_ID)
+        {
+            var data = Tour_ReviewService.Get().
+                Where(booking => booking.Tourist_ID == tourist_ID)
+                .ToList();
+
+            if (data.Count > 0)
+            {
+                var mapper = MapperService<Tour_Review, Tour_ReviewDTO>.GetMapper();
+                var tour_ReviewDTO = mapper.Map<List<Tour_ReviewDTO>>(data);
+                return tour_ReviewDTO;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        #endregion Get Bookings by ID
+
         #endregion Feature APIs
 
 
