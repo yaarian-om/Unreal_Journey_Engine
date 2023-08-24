@@ -326,9 +326,9 @@ namespace BLL.Services
         #region Get Bookings by ID
         public static List<Tour_ReviewDTO> Get_All_Reviews_by_Tourist_ID(int tourist_ID)
         {
-            var data = Tour_ReviewService.Get().
-                Where(booking => booking.Tourist_ID == tourist_ID)
-                .ToList();
+            var data = Tour_ReviewService.Get()
+                    .Where(review => review.Tourist_ID == tourist_ID)
+                    .ToList();
 
             if (data.Count > 0)
             {

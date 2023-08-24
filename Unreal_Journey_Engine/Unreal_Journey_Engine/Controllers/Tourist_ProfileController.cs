@@ -592,7 +592,7 @@ namespace Unreal_Journey_Engine.Controllers
             {
                 var current_tourist_ID = User_Info_Provider.Get_Tourist_ID(authorizationHeader);
                 var data = Tourist_ProfileService.Get_All_Booking_by_Tourist_ID(current_tourist_ID);
-                if (data.Count > 0)
+                if (data != null && data.Count > 0)
                 {
                     return Request.CreateResponse(HttpStatusCode.OK, data);
                 }
